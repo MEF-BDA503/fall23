@@ -24,9 +24,10 @@ RMarkdown/Quarto Assignment (Deadline Oct 26, 18:30): This is your first assignm
 
 1. Prepare a Quarto (.qmd) document. 
 2. Introduce yourself in one paragraph (Your name surname, your work, your data interests and how you (plan to) use data science skills in your current/future work). Add your Linkedin account link.
-3. Watch some UseR-2022 videos (Main Link - Recordings Link) and write one of them down on your RMarkdown/Quarto document. Alternatively you can check RStudio Global 2022 conference talks.
-4. Find 3 R posts relevant to your interests and describe them. Get the html output and put it in your progress journal repository.
-5. Provide a link from your Progress Journal page.
+3. Watch some demo and tutorial videos from [Posit Youtube channel playlist](https://youtube.com/playlist?list=PL9HYL-VRX0oTOK4cpbCbRk15K2roEgzVW&si=o2Vh9XiQT_pnMo_B) and write one of them down on your Quarto document. 
+4. Propose a dataset (provide a link to source) which we should use in the class for demonstration and teaching purposes. Briefly explain the educational value of the dataset.
+5. Find 3 R posts relevant to your interests and describe them. Get the html output and put it in your progress journal repository.
+6. Provide a link from your Progress Journal page.
 
 Example Progress Journals from previous year: [Berk Özcan](https://pjournal.github.io/mef06-berkozzcan/assignment1.html) - [Uğur Özata](https://pjournal.github.io/mef06-ugemir/assignment1.html) - [Mehmet Kemal Ucuzcu](https://pjournal.github.io/mef06-mekucz/assignment1.html)
 :::
