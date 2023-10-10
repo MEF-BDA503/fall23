@@ -9,7 +9,27 @@ toc: false
 - [Base R Notes](https://berkorbay.github.io/book-of-eda/base-r.html)
 - [Base R in Detail Notes](https://berkorbay.github.io/book-of-eda/base-r-in-detail.html)
 - [Quarto - Getting Started](https://quarto.org/docs/get-started/)
+
+::: {.callout-tip title="Week 1 - Bonus Material" collapse="true"}
 - [Intro to R Presentation (Archive)](https://pjournal.github.io/docs/r_intro/2109/#1)
+- You can try to code these challenges in R
+    - [Euler Project](https://projecteuler.net/archives)
+    - [Practice Python](https://www.practicepython.org/)
+- Turkish R resource: [Eskişehir R User Group](https://www.youtube.com/@eskisehirrusergroup2103)
+:::
+
+::: {.callout-caution title="Assignment 1" collapse="false"}
+
+RMarkdown/Quarto Assignment (Deadline Oct 26, 18:30): This is your first assignment.
+
+1. Prepare a Quarto (.qmd) document. 
+2. Introduce yourself in one paragraph (Your name surname, your work, your data interests and how you (plan to) use data science skills in your current/future work). Add your Linkedin account link.
+3. Watch some UseR-2022 videos (Main Link - Recordings Link) and write one of them down on your RMarkdown/Quarto document. Alternatively you can check RStudio Global 2022 conference talks.
+4. Find 3 R posts relevant to your interests and describe them. Get the html output and put it in your progress journal repository.
+5. Provide a link from your Progress Journal page.
+
+Example Progress Journals from previous year: [Berk Özcan](https://pjournal.github.io/mef06-berkozzcan/assignment1.html) - [Uğur Özata](https://pjournal.github.io/mef06-ugemir/assignment1.html) - [Mehmet Kemal Ucuzcu](https://pjournal.github.io/mef06-mekucz/assignment1.html)
+:::
 
 # Week 0
 
