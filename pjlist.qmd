@@ -8,5 +8,8 @@ See [here](./projects) for group project details.
 
 ### Student Progress Journals
 
-_Ordered by first name_
+*Ordered by first name*
 
+-   [Burcu Altıparmak](https://pjournal.github.io/mef07-BurcuAltiparmak/)
+-   [Nida Dönmez](https://pjournal.github.io/mef07-nida-91/)
+-   [Özgenur Şensoy](https://pjournal.github.io/mef07-ozgenursensoy/)
