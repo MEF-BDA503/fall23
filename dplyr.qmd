@@ -109,7 +109,7 @@ starwars %>%
 
 ## `mutate`
 
-You can do operations with `mutate`
+You can do operations with `mutate` and `transmute` (see on full notes)
 
 ```{r}
 #| eval: true
@@ -141,7 +141,7 @@ starwars %>%
 ```
 
 
-## Advanced `dplyr`
+## Advanced `dplyr`
 
 There is always more to learn. Here are some examples.
 

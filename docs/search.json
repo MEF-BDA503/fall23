@@ -60,14 +60,21 @@
     "href": "dplyr.html#mutate",
     "title": "dplyr",
     "section": "mutate",
-    "text": "mutate\nYou can do operations with mutate\n\nstarwars %&gt;%\n    select(name, height, mass) %&gt;%\n    filter(complete.cases(.)) %&gt;%\n    mutate(bmi = mass / ((height / 100)^2)) %&gt;% ## body mass index\n    arrange(desc(bmi))\n\n# A tibble: 59 × 4\n   name                  height  mass   bmi\n   &lt;chr&gt;                  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 Jabba Desilijic Tiure    175  1358 443. \n 2 Dud Bolt                  94    45  50.9\n 3 Yoda                      66    17  39.0\n 4 Owen Lars                178   120  37.9\n 5 IG-88                    200   140  35  \n 6 R2-D2                     96    32  34.7\n 7 Grievous                 216   159  34.1\n 8 R5-D4                     97    32  34.0\n 9 Jek Tono Porkins         180   110  34.0\n10 Darth Vader              202   136  33.3\n# ℹ 49 more rows"
+    "text": "mutate\nYou can do operations with mutate and transmute (see on full notes)\n\nstarwars %&gt;%\n    select(name, height, mass) %&gt;%\n    filter(complete.cases(.)) %&gt;%\n    mutate(bmi = mass / ((height / 100)^2)) %&gt;% ## body mass index\n    arrange(desc(bmi))\n\n# A tibble: 59 × 4\n   name                  height  mass   bmi\n   &lt;chr&gt;                  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 Jabba Desilijic Tiure    175  1358 443. \n 2 Dud Bolt                  94    45  50.9\n 3 Yoda                      66    17  39.0\n 4 Owen Lars                178   120  37.9\n 5 IG-88                    200   140  35  \n 6 R2-D2                     96    32  34.7\n 7 Grievous                 216   159  34.1\n 8 R5-D4                     97    32  34.0\n 9 Jek Tono Porkins         180   110  34.0\n10 Darth Vader              202   136  33.3\n# ℹ 49 more rows"
   },
   {
     "objectID": "dplyr.html#group_by-and-summarise",
     "href": "dplyr.html#group_by-and-summarise",
     "title": "dplyr",
     "section": "group_by and summarise",
-    "text": "group_by and summarise\ngroup_by and summarise allows you to create summary (pivot) tables.\n\nstarwars %&gt;%\n    group_by(species) %&gt;%\n    summarise(mean_mass = mean(mass, na.rm = TRUE)) %&gt;%\n    ungroup() %&gt;%\n    arrange(desc(mean_mass))\n\n# A tibble: 38 × 2\n   species      mean_mass\n   &lt;chr&gt;            &lt;dbl&gt;\n 1 Hutt            1358  \n 2 Kaleesh          159  \n 3 Wookiee          124  \n 4 Trandoshan       113  \n 5 Besalisk         102  \n 6 Neimodian         90  \n 7 Kaminoan          88  \n 8 Nautolan          87  \n 9 Mon Calamari      83  \n10 Human             82.8\n# ℹ 28 more rows\n\n\n## Advanced dplyr\nThere is always more to learn. Here are some examples.\n\nlead, lag to offset rows\npivot_wider, pivot_longer to transform to wide and long formats, respectively\nseparate to separate rows in a column according to separation rules (similar to Text to Columns in Excel)\n*_join to join to data tables\n\nSee extra resources section on Book of EDA."
+    "text": "group_by and summarise\ngroup_by and summarise allows you to create summary (pivot) tables.\n\nstarwars %&gt;%\n    group_by(species) %&gt;%\n    summarise(mean_mass = mean(mass, na.rm = TRUE)) %&gt;%\n    ungroup() %&gt;%\n    arrange(desc(mean_mass))\n\n# A tibble: 38 × 2\n   species      mean_mass\n   &lt;chr&gt;            &lt;dbl&gt;\n 1 Hutt            1358  \n 2 Kaleesh          159  \n 3 Wookiee          124  \n 4 Trandoshan       113  \n 5 Besalisk         102  \n 6 Neimodian         90  \n 7 Kaminoan          88  \n 8 Nautolan          87  \n 9 Mon Calamari      83  \n10 Human             82.8\n# ℹ 28 more rows"
+  },
+  {
+    "objectID": "dplyr.html#advanced-dplyr",
+    "href": "dplyr.html#advanced-dplyr",
+    "title": "dplyr",
+    "section": "Advanced dplyr",
+    "text": "Advanced dplyr\nThere is always more to learn. Here are some examples.\n\nlead, lag to offset rows\npivot_wider, pivot_longer to transform to wide and long formats, respectively\nseparate to separate rows in a column according to separation rules (similar to Text to Columns in Excel)\n*_join to join to data tables\n\nSee extra resources section on Book of EDA."
   },
   {
     "objectID": "intro.html#what-is-this-course-about",
