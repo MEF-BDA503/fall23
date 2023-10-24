@@ -1,0 +1,157 @@
+---
+title: "dplyr"
+subtitle: "Quick Introduction"
+author: "Berk Orbay"
+institute: "MEF BDA 503"
+format: 
+    revealjs:
+        smaller: true
+---
+
+## What is dplyr?
+
+`dplyr` is an R package specialized on data manipulation. You can simply
+
++ `select` columns
++ `filter` rows according to criteria 
++ `arrange` and sort rows
++ generate derivative columns with `mutate` and `transmute`
++ create pivot tables with `group_by` and `summarise`
+
+which are essentially required to perform data manipulation tasks. For more complex tasks, `dplyr` also offers more commands.
+ 
+\ 
+
+Official page: <https://dplyr.tidyverse.org/>
+
+## Why dplyr?
+
+`dplyr` is one of the most versatile data manipulation libraries ever built in any language.
+
++ Inspired by many best practices and learned from past mistakes. See [here](https://www.youtube.com/watch?v=dWjSYqI7Vog) and [here](https://r4ds.had.co.nz/tidy-data.html) for more information.  
++ It is a one-stop shop for most data manipulation processes such as `pandas` in Python.   
++ Familiarization with SQL-like syntax.  
++ Backend is written in C++. Thus, high speed computations.  
++ Backed by a comprehensive set of complementary libraries (i.e, `tidyverse`) and used by many other libraries (e.g, `dbplyr` for SQL operations).  
+
+## Who develops dplyr?
+
+`dplyr` is created by Hadley Wickham in 2014. See more information about Hadley on his webpage <https://hadley.nz/>.
+
++ Since then a lot of developers contributed to the core `dplyr`. You can see a full list [here](https://github.com/tidyverse/dplyr/graphs/contributors).
++ `dplyr` and many associated libraries under `tidyverse` are being developed and supported by [Posit](https://posit.co) (formerly known as RStudio).
+
+See more information on its official webpage <https://dplyr.tidyverse.org/>.
+
+# Fundamentals
+
+**Important** Full notes are on [Book of EDA](https://berkorbay.github.io/book-of-eda/dplyr.html)
+
+\
+
+```{r}
+#| eval: true
+#| echo: true
+
+##  If you have never installed dplyr before
+##  install.packages("dplyr")
+
+##  First load the library
+library(dplyr)
+
+## We are going to use starwars datasets to show examples
+starwars
+```
+
+A data frame in `dplyr` is called a `tibble`. `tibble` has more and different functionality than a regular `data.frame`.
+
+## `select`
+
+`select` simply displays columns
+
+```{r}
+#| eval: true
+#| echo: true
+
+starwars %>% select(name, homeworld)
+```
+
+Notice the pipe operator (`%>%`)? It is used to chain dplyr (and other) commands.
+
+See also `rename` on notes.
+
+## `arrange`
+
+`arrange` simply sorts values (A-Z, 0-9 or reverse)
+
+```{r}
+#| eval: true
+#| echo: true
+
+starwars %>%
+    arrange(species, desc(height)) %>%
+    select(name, species, height)
+```
+
+## `filter`
+
+`filter` show rows according to specified criteria
+
+```{r}
+#| eval: true
+#| echo: true
+
+starwars %>%
+    filter(species == "Droid") %>%
+    arrange(desc(mass)) %>%
+    select(name, species, homeworld, mass)
+```
+
+## `mutate`
+
+You can do operations with `mutate`
+
+```{r}
+#| eval: true
+#| echo: true
+
+starwars %>%
+    select(name, height, mass) %>%
+    filter(complete.cases(.)) %>%
+    mutate(bmi = mass / ((height / 100)^2)) %>% ## body mass index
+    arrange(desc(bmi))
+
+```
+
+![](https://hellogiggles.com/wp-content/uploads/sites/7/2017/02/25/jabba-e1488050781261.jpg?quality=82&strip=1&resize=1250%2C702)
+
+## `group_by` and `summarise`
+
+`group_by` and `summarise` allows you to create summary (pivot) tables.
+
+```{r}
+#| eval: true
+#| echo: true
+
+starwars %>%
+    group_by(species) %>%
+    summarise(mean_mass = mean(mass, na.rm = TRUE)) %>%
+    ungroup() %>%
+    arrange(desc(mean_mass))
+```
+
+
+## Advanced `dplyr`
+
+There is always more to learn. Here are some examples.
+
++ `lead`, `lag` to offset rows
++ `pivot_wider`, `pivot_longer` to transform to wide and long formats, respectively
++ `separate` to separate rows in a column according to separation rules (similar to Text to Columns in Excel)
++ `*_join` to join to data tables
+
+See extra resources section on Book of EDA.
+
+# Thanks!
+
+Course webpage [https://mef-bda503.github.io/](https://mef-bda503.github.io/).

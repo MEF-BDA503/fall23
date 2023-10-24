@@ -3,6 +3,23 @@ title: "BDA 503 Fall 2023"
 toc: false
 ---
 
+# Week 2
+
+- [Introduction to dplyr](./dplyr.html)
+- [dplyr Lecture Notes](https://berkorbay.github.io/book-of-eda/dplyr.html)
+- *Supplementary resources*
+    - [dplyr Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
+    - [Book: R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham & Garrett Grolemund
+    - [dplyr with Election Data](https://pjournal.github.io/files/dplyr_elections.html)
+
+::: {.callout-tip title="Bonus Material" collapse="true"}
+- Turkish dplyr R resource: [Eskişehir R User Group](https://www.youtube.com/watch?v=bzrP5bOIyYI)
+:::
+
+::: {.callout-caution title="In-Class Exercise" collapse="false"}
+Soon...
+:::
+
 # Week 1
 
 - [Introduction to BDA 503](./intro.html)
@@ -18,7 +35,7 @@ toc: false
 - Turkish R resource: [Eskişehir R User Group](https://www.youtube.com/@eskisehirrusergroup2103)
 :::
 
-::: {.callout-caution title="Assignment 1" collapse="false"}
+::: {.callout-caution title="Assignment 1" collapse="true"}
 
 RMarkdown/Quarto Assignment (Deadline Oct 26, 18:30): This is your first assignment.
 

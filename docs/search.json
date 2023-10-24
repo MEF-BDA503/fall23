@@ -4,14 +4,70 @@
     "href": "pjlist.html",
     "title": "Progress Journals",
     "section": "",
-    "text": "Group Progress Journals\nSee here for group project details.\n\n\nStudent Progress Journals\nOrdered by first name\n\nBurcu Altıparmak\nNida Dönmez\nÖzgenur Şensoy"
+    "text": "Group Progress Journals\nSee here for group project details.\n\n\nStudent Progress Journals\nOrdered by first name\n\n*Alp Gökçek\n*Ayşe Idil Çaylı\n*Bengü Üzmez\nBurcu Altiparmak Işıklı\nDerya Şaşmaz\nGözde Uğur Kayar\nMelih Can Akgül\nNida Dönmez\nÖzgenur Şensoy\nSezer Türkmen\nSezgi Ayhan\nSimay Akburak\n*Zelha Tunç Pekkan"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "BDA 503 Fall 2023",
     "section": "",
-    "text": "Week 1\n\nIntroduction to BDA 503\nBase R Notes\nBase R in Detail Notes\nQuarto - Getting Started\n\n\n\n\n\n\n\nWeek 1 - Bonus Material\n\n\n\n\n\n\nIntro to R Presentation (Archive)\nYou can try to code these challenges in R\n\nEuler Project\nPractice Python\n\nTurkish R resource: Eskişehir R User Group\n\n\n\n\n\n\n\n\n\n\nAssignment 1\n\n\n\n\n\nRMarkdown/Quarto Assignment (Deadline Oct 26, 18:30): This is your first assignment.\n\nPrepare a Quarto (.qmd) document.\nIntroduce yourself in one paragraph (Your name surname, your work, your data interests and how you (plan to) use data science skills in your current/future work). Add your Linkedin account link.\nWatch some demo and tutorial videos from Posit Youtube channel playlist and write one of them down on your Quarto document.\nPropose a dataset (provide a link to source) which we should use in the class for demonstration and teaching purposes. Briefly explain the educational value of the dataset.\nFind 3 R posts relevant to your interests and describe them. Get the html output and put it in your progress journal repository.\nProvide a link from your Progress Journal page.\n\nExample Progress Journals from previous year: Berk Özcan - Uğur Özata - Mehmet Kemal Ucuzcu\n\n\n\n\n\nWeek 0\nThis course benefits from DataCamp for the Classroom program. See details here.\nSome light reading (blog posts)\n\nInstructor’s opinion about GPT use for the classroom\nAbout recent developments with RStudio (Posit) and R’s future (2022)\nStudent projects of previous years (2020)\nHow this course is structured in previous years (2018)\nInstructor’s view on R (2017)\n\nThis semester course webpage went under a significant refurbishment. Course archive is in another repository.\n\nCourse Archive"
+    "text": "Week 2\n\nIntroduction to dplyr\ndplyr Lecture Notes\nSupplementary resources\n\ndplyr Cheat Sheet\nBook: R for Data Science by Hadley Wickham & Garrett Grolemund\ndplyr with Election Data\n\n\n\n\n\n\n\n\nBonus Material\n\n\n\n\n\n\nTurkish dplyr R resource: Eskişehir R User Group\n\n\n\n\n\n\n\n\n\n\nIn-Class Exercise\n\n\n\n\n\nSoon…\n\n\n\n\n\nWeek 1\n\nIntroduction to BDA 503\nBase R Notes\nBase R in Detail Notes\nQuarto - Getting Started\n\n\n\n\n\n\n\nWeek 1 - Bonus Material\n\n\n\n\n\n\nIntro to R Presentation (Archive)\nYou can try to code these challenges in R\n\nEuler Project\nPractice Python\n\nTurkish R resource: Eskişehir R User Group\n\n\n\n\n\n\n\n\n\n\nAssignment 1\n\n\n\n\n\nRMarkdown/Quarto Assignment (Deadline Oct 26, 18:30): This is your first assignment.\n\nPrepare a Quarto (.qmd) document.\nIntroduce yourself in one paragraph (Your name surname, your work, your data interests and how you (plan to) use data science skills in your current/future work). Add your Linkedin account link.\nWatch some demo and tutorial videos from Posit Youtube channel playlist and write one of them down on your Quarto document.\nPropose a dataset (provide a link to source) which we should use in the class for demonstration and teaching purposes. Briefly explain the educational value of the dataset.\nFind 3 R posts relevant to your interests and describe them. Get the html output and put it in your progress journal repository.\nProvide a link from your Progress Journal page.\n\nExample Progress Journals from previous year: Berk Özcan - Uğur Özata - Mehmet Kemal Ucuzcu\n\n\n\n\n\nWeek 0\nThis course benefits from DataCamp for the Classroom program. See details here.\nSome light reading (blog posts)\n\nInstructor’s opinion about GPT use for the classroom\nAbout recent developments with RStudio (Posit) and R’s future (2022)\nStudent projects of previous years (2020)\nHow this course is structured in previous years (2018)\nInstructor’s view on R (2017)\n\nThis semester course webpage went under a significant refurbishment. Course archive is in another repository.\n\nCourse Archive"
+  },
+  {
+    "objectID": "dplyr.html#what-is-dplyr",
+    "href": "dplyr.html#what-is-dplyr",
+    "title": "dplyr",
+    "section": "What is dplyr?",
+    "text": "What is dplyr?\ndplyr is an R package specialized on data manipulation. You can simply\n\nselect columns\nfilter rows according to criteria\narrange and sort rows\ngenerate derivative columns with mutate and transmute\ncreate pivot tables with group_by and summarise\n\nwhich are essentially required to perform data manipulation tasks. For more complex tasks, dplyr also offers more commands.\n \nOfficial page: https://dplyr.tidyverse.org/"
+  },
+  {
+    "objectID": "dplyr.html#why-dplyr",
+    "href": "dplyr.html#why-dplyr",
+    "title": "dplyr",
+    "section": "Why dplyr?",
+    "text": "Why dplyr?\ndplyr is one of the most versatile data manipulation libraries ever built in any language.\n\nInspired by many best practices and learned from past mistakes. See here and here for more information.\n\nIt is a one-stop shop for most data manipulation processes such as pandas in Python.\n\nFamiliarization with SQL-like syntax.\n\nBackend is written in C++. Thus, high speed computations.\n\nBacked by a comprehensive set of complementary libraries (i.e, tidyverse) and used by many other libraries (e.g, dbplyr for SQL operations)."
+  },
+  {
+    "objectID": "dplyr.html#who-develops-dplyr",
+    "href": "dplyr.html#who-develops-dplyr",
+    "title": "dplyr",
+    "section": "Who develops dplyr?",
+    "text": "Who develops dplyr?\ndplyr is created by Hadley Wickham in 2014. See more information about Hadley on his webpage https://hadley.nz/.\n\nSince then a lot of developers contributed to the core dplyr. You can see a full list here.\ndplyr and many associated libraries under tidyverse are being developed and supported by Posit (formerly known as RStudio).\n\nSee more information on its official webpage https://dplyr.tidyverse.org/."
+  },
+  {
+    "objectID": "dplyr.html#select",
+    "href": "dplyr.html#select",
+    "title": "dplyr",
+    "section": "select",
+    "text": "select\nselect simply displays columns\n\nstarwars %&gt;% select(name, homeworld)\n\n# A tibble: 87 × 2\n   name               homeworld\n   &lt;chr&gt;              &lt;chr&gt;    \n 1 Luke Skywalker     Tatooine \n 2 C-3PO              Tatooine \n 3 R2-D2              Naboo    \n 4 Darth Vader        Tatooine \n 5 Leia Organa        Alderaan \n 6 Owen Lars          Tatooine \n 7 Beru Whitesun lars Tatooine \n 8 R5-D4              Tatooine \n 9 Biggs Darklighter  Tatooine \n10 Obi-Wan Kenobi     Stewjon  \n# ℹ 77 more rows\n\n\nNotice the pipe operator (%&gt;%)? It is used to chain dplyr (and other) commands.\nSee also rename on notes."
+  },
+  {
+    "objectID": "dplyr.html#arrange",
+    "href": "dplyr.html#arrange",
+    "title": "dplyr",
+    "section": "arrange",
+    "text": "arrange\narrange simply sorts values (A-Z, 0-9 or reverse)\n\nstarwars %&gt;%\n    arrange(species, desc(height)) %&gt;%\n    select(name, species, height)\n\n# A tibble: 87 × 3\n   name            species  height\n   &lt;chr&gt;           &lt;chr&gt;     &lt;int&gt;\n 1 Ratts Tyerell   Aleena       79\n 2 Dexter Jettster Besalisk    198\n 3 Ki-Adi-Mundi    Cerean      198\n 4 Mas Amedda      Chagrian    196\n 5 Zam Wesell      Clawdite    168\n 6 IG-88           Droid       200\n 7 C-3PO           Droid       167\n 8 R5-D4           Droid        97\n 9 R2-D2           Droid        96\n10 R4-P17          Droid        96\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "dplyr.html#filter",
+    "href": "dplyr.html#filter",
+    "title": "dplyr",
+    "section": "filter",
+    "text": "filter\nfilter show rows according to specified criteria\n\nstarwars %&gt;%\n    filter(species == \"Droid\") %&gt;%\n    arrange(desc(mass)) %&gt;%\n    select(name, species, homeworld, mass)\n\n# A tibble: 6 × 4\n  name   species homeworld  mass\n  &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;\n1 IG-88  Droid   &lt;NA&gt;        140\n2 C-3PO  Droid   Tatooine     75\n3 R2-D2  Droid   Naboo        32\n4 R5-D4  Droid   Tatooine     32\n5 R4-P17 Droid   &lt;NA&gt;         NA\n6 BB8    Droid   &lt;NA&gt;         NA"
+  },
+  {
+    "objectID": "dplyr.html#mutate",
+    "href": "dplyr.html#mutate",
+    "title": "dplyr",
+    "section": "mutate",
+    "text": "mutate\nYou can do operations with mutate\n\nstarwars %&gt;%\n    select(name, height, mass) %&gt;%\n    filter(complete.cases(.)) %&gt;%\n    mutate(bmi = mass / ((height / 100)^2)) %&gt;% ## body mass index\n    arrange(desc(bmi))\n\n# A tibble: 59 × 4\n   name                  height  mass   bmi\n   &lt;chr&gt;                  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 Jabba Desilijic Tiure    175  1358 443. \n 2 Dud Bolt                  94    45  50.9\n 3 Yoda                      66    17  39.0\n 4 Owen Lars                178   120  37.9\n 5 IG-88                    200   140  35  \n 6 R2-D2                     96    32  34.7\n 7 Grievous                 216   159  34.1\n 8 R5-D4                     97    32  34.0\n 9 Jek Tono Porkins         180   110  34.0\n10 Darth Vader              202   136  33.3\n# ℹ 49 more rows"
+  },
+  {
+    "objectID": "dplyr.html#group_by-and-summarise",
+    "href": "dplyr.html#group_by-and-summarise",
+    "title": "dplyr",
+    "section": "group_by and summarise",
+    "text": "group_by and summarise\ngroup_by and summarise allows you to create summary (pivot) tables.\n\nstarwars %&gt;%\n    group_by(species) %&gt;%\n    summarise(mean_mass = mean(mass, na.rm = TRUE)) %&gt;%\n    ungroup() %&gt;%\n    arrange(desc(mean_mass))\n\n# A tibble: 38 × 2\n   species      mean_mass\n   &lt;chr&gt;            &lt;dbl&gt;\n 1 Hutt            1358  \n 2 Kaleesh          159  \n 3 Wookiee          124  \n 4 Trandoshan       113  \n 5 Besalisk         102  \n 6 Neimodian         90  \n 7 Kaminoan          88  \n 8 Nautolan          87  \n 9 Mon Calamari      83  \n10 Human             82.8\n# ℹ 28 more rows\n\n\n## Advanced dplyr\nThere is always more to learn. Here are some examples.\n\nlead, lag to offset rows\npivot_wider, pivot_longer to transform to wide and long formats, respectively\nseparate to separate rows in a column according to separation rules (similar to Text to Columns in Excel)\n*_join to join to data tables\n\nSee extra resources section on Book of EDA."
   },
   {
     "objectID": "intro.html#what-is-this-course-about",
