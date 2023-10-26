@@ -14,6 +14,18 @@ toc: false
 
 ::: {.callout-tip title="Bonus Material" collapse="true"}
 - Turkish dplyr R resource: [Eskişehir R User Group](https://www.youtube.com/watch?v=bzrP5bOIyYI)
+- Exercise on basic Stock Fundamentals data. Run the following code to get the data.
+```{r}
+#| eval: false
+#| echo: true
+
+library(tidyverse) ## or library(dplyr)
+tf <- tempfile()
+download.file("https://github.com/berkorbay/datasets/raw/master/stock_fundamentals/fundamentals_20231024.rds",tf)
+f_df <- readRDS(tf)
+
+f_df %>% glimpse() 
+```
 :::
 
 ::: {.callout-caution title="In-Class Exercise (Individual)" collapse="false"}
