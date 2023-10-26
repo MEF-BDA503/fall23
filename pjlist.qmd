@@ -19,9 +19,9 @@ See [here](./projects) for group project details.
 - [Özgenur Şensoy](https://pjournal.github.io/mef07-ozgenursensoy/)
 - [Sezer Türkmen](https://pjournal.github.io/mef07-sezerlucianturkmen/)
 - [Sezgi Ayhan](https://pjournal.github.io/mef07-sezgia/)
+- [Zelha Tunç Pekkan](https://pjournal.github.io/mef07-Zelha2024/)
 
 *Not initiated a PJ*
 
 - \*[Alp Gökçek](https://pjournal.github.io/)
 - \*[Ayşe Idil Çaylı](https://pjournal.github.io/)
-- \*[Zelha Tunç Pekkan](https://pjournal.github.io/)
