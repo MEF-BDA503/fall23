@@ -10,9 +10,7 @@ See [here](./projects) for group project details.
 
 *Ordered by first name*
 
-- \*[Alp Gökçek](https://pjournal.github.io/)
-- \*[Ayşe Idil Çaylı](https://pjournal.github.io/)
-- \*[Bengü Üzmez](https://pjournal.github.io/)
+- [Bengü Üzmez](https://pjournal.github.io/mef07-uzmezb/)
 - [Burcu Altiparmak Işıklı](https://pjournal.github.io/mef07-BurcuAltiparmak/)
 - [Derya Şaşmaz](https://pjournal.github.io/mef07-sasmazd/)
 - [Gözde Uğur Kayar](https://pjournal.github.io/mef07-GozdeUgurK/)
@@ -22,4 +20,9 @@ See [here](./projects) for group project details.
 - [Sezer Türkmen](https://pjournal.github.io/mef07-sezerlucianturkmen/)
 - [Sezgi Ayhan](https://pjournal.github.io/mef07-sezgia/)
 - [Simay Akburak](https://pjournal.github.io/mef07-Simaycims/)
+
+*Not initiated a PJ*
+
+- \*[Alp Gökçek](https://pjournal.github.io/)
+- \*[Ayşe Idil Çaylı](https://pjournal.github.io/)
 - \*[Zelha Tunç Pekkan](https://pjournal.github.io/)

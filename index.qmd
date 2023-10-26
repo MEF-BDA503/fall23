@@ -16,8 +16,8 @@ toc: false
 - Turkish dplyr R resource: [Eskişehir R User Group](https://www.youtube.com/watch?v=bzrP5bOIyYI)
 :::
 
-::: {.callout-caution title="In-Class Exercise" collapse="false"}
-Soon...
+::: {.callout-caution title="In-Class Exercise (Individual)" collapse="false"}
+Prepare three simple but striking analyses using `dplyr` on your proposed data sets in Assignment 1. Open a new \.qmd document named `inclass1.qmd` and make it visible on your PJ (update `_quarto.yml` file).
 :::
 
 # Week 1
