@@ -19,7 +19,6 @@ See [here](./projects) for group project details.
 - [Özgenur Şensoy](https://pjournal.github.io/mef07-ozgenursensoy/)
 - [Sezer Türkmen](https://pjournal.github.io/mef07-sezerlucianturkmen/)
 - [Sezgi Ayhan](https://pjournal.github.io/mef07-sezgia/)
-- [Simay Akburak](https://pjournal.github.io/mef07-Simaycims/)
 
 *Not initiated a PJ*
 
