@@ -1,0 +1,261 @@
+[
+  {
+    "objectID": "pjlist.html",
+    "href": "pjlist.html",
+    "title": "Progress Journals",
+    "section": "",
+    "text": "Group Progress Journals\nSee here for group project details.\n\n\nStudent Progress Journals\nOrdered by first name\n\nBengü Üzmez\nBurcu Altiparmak Işıklı\nDerya Şaşmaz\nGözde Uğur Kayar\nMelih Can Akgül\nNida Dönmez\nÖzgenur Şensoy\nSezer Türkmen\nSezgi Ayhan\nSimay Akburak\n\nNot initiated a PJ\n\n*Alp Gökçek\n*Ayşe Idil Çaylı\n*Zelha Tunç Pekkan"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "BDA 503 Fall 2023",
+    "section": "",
+    "text": "Week 2\n\nIntroduction to dplyr\ndplyr Lecture Notes\nSupplementary resources\n\ndplyr Cheat Sheet\nBook: R for Data Science by Hadley Wickham & Garrett Grolemund\ndplyr with Election Data\n\n\n\n\n\n\n\n\nBonus Material\n\n\n\n\n\n\nTurkish dplyr R resource: Eskişehir R User Group\n\n\n\n\n\n\n\n\n\n\nIn-Class Exercise (Individual)\n\n\n\n\n\nPrepare three simple but striking analyses using dplyr on your proposed data sets in Assignment 1. Open a new .qmd document named inclass1.qmd and make it visible on your PJ (update _quarto.yml file).\n\n\n\n\n\nWeek 1\n\nIntroduction to BDA 503\nBase R Notes\nBase R in Detail Notes\nQuarto - Getting Started\n\n\n\n\n\n\n\nWeek 1 - Bonus Material\n\n\n\n\n\n\nIntro to R Presentation (Archive)\nYou can try to code these challenges in R\n\nEuler Project\nPractice Python\n\nTurkish R resource: Eskişehir R User Group\n\n\n\n\n\n\n\n\n\n\nAssignment 1\n\n\n\n\n\nRMarkdown/Quarto Assignment (Deadline Oct 26, 18:30): This is your first assignment.\n\nPrepare a Quarto (.qmd) document.\nIntroduce yourself in one paragraph (Your name surname, your work, your data interests and how you (plan to) use data science skills in your current/future work). Add your Linkedin account link.\nWatch some demo and tutorial videos from Posit Youtube channel playlist and write one of them down on your Quarto document.\nPropose a dataset (provide a link to source) which we should use in the class for demonstration and teaching purposes. Briefly explain the educational value of the dataset.\nFind 3 R posts relevant to your interests and describe them. Get the html output and put it in your progress journal repository.\nProvide a link from your Progress Journal page.\n\nExample Progress Journals from previous year: Berk Özcan - Uğur Özata - Mehmet Kemal Ucuzcu\n\n\n\n\n\nWeek 0\nThis course benefits from DataCamp for the Classroom program. See details here.\nSome light reading (blog posts)\n\nInstructor’s opinion about GPT use for the classroom\nAbout recent developments with RStudio (Posit) and R’s future (2022)\nStudent projects of previous years (2020)\nHow this course is structured in previous years (2018)\nInstructor’s view on R (2017)\n\nThis semester course webpage went under a significant refurbishment. Course archive is in another repository.\n\nCourse Archive"
+  },
+  {
+    "objectID": "dplyr.html#what-is-dplyr",
+    "href": "dplyr.html#what-is-dplyr",
+    "title": "dplyr",
+    "section": "What is dplyr?",
+    "text": "What is dplyr?\ndplyr is an R package specialized on data manipulation. You can simply\n\nselect columns\nfilter rows according to criteria\narrange and sort rows\ngenerate derivative columns with mutate and transmute\ncreate pivot tables with group_by and summarise\n\nwhich are essentially required to perform data manipulation tasks. For more complex tasks, dplyr also offers more commands.\n \nOfficial page: https://dplyr.tidyverse.org/"
+  },
+  {
+    "objectID": "dplyr.html#why-dplyr",
+    "href": "dplyr.html#why-dplyr",
+    "title": "dplyr",
+    "section": "Why dplyr?",
+    "text": "Why dplyr?\ndplyr is one of the most versatile data manipulation libraries ever built in any language.\n\nInspired by many best practices and learned from past mistakes. See here and here for more information.\n\nIt is a one-stop shop for most data manipulation processes such as pandas in Python.\n\nFamiliarization with SQL-like syntax.\n\nBackend is written in C++. Thus, high speed computations.\n\nBacked by a comprehensive set of complementary libraries (i.e, tidyverse) and used by many other libraries (e.g, dbplyr for SQL operations)."
+  },
+  {
+    "objectID": "dplyr.html#who-develops-dplyr",
+    "href": "dplyr.html#who-develops-dplyr",
+    "title": "dplyr",
+    "section": "Who develops dplyr?",
+    "text": "Who develops dplyr?\ndplyr is created by Hadley Wickham in 2014. See more information about Hadley on his webpage https://hadley.nz/.\n\nSince then a lot of developers contributed to the core dplyr. You can see a full list here.\ndplyr and many associated libraries under tidyverse are being developed and supported by Posit (formerly known as RStudio).\n\nSee more information on its official webpage https://dplyr.tidyverse.org/."
+  },
+  {
+    "objectID": "dplyr.html#select",
+    "href": "dplyr.html#select",
+    "title": "dplyr",
+    "section": "select",
+    "text": "select\nselect simply displays columns\n\nstarwars %&gt;% select(name, homeworld)\n\n# A tibble: 87 × 2\n   name               homeworld\n   &lt;chr&gt;              &lt;chr&gt;    \n 1 Luke Skywalker     Tatooine \n 2 C-3PO              Tatooine \n 3 R2-D2              Naboo    \n 4 Darth Vader        Tatooine \n 5 Leia Organa        Alderaan \n 6 Owen Lars          Tatooine \n 7 Beru Whitesun lars Tatooine \n 8 R5-D4              Tatooine \n 9 Biggs Darklighter  Tatooine \n10 Obi-Wan Kenobi     Stewjon  \n# ℹ 77 more rows\n\n\nNotice the pipe operator (%&gt;%)? It is used to chain dplyr (and other) commands.\nSee also rename on notes."
+  },
+  {
+    "objectID": "dplyr.html#arrange",
+    "href": "dplyr.html#arrange",
+    "title": "dplyr",
+    "section": "arrange",
+    "text": "arrange\narrange simply sorts values (A-Z, 0-9 or reverse)\n\nstarwars %&gt;%\n    arrange(species, desc(height)) %&gt;%\n    select(name, species, height)\n\n# A tibble: 87 × 3\n   name            species  height\n   &lt;chr&gt;           &lt;chr&gt;     &lt;int&gt;\n 1 Ratts Tyerell   Aleena       79\n 2 Dexter Jettster Besalisk    198\n 3 Ki-Adi-Mundi    Cerean      198\n 4 Mas Amedda      Chagrian    196\n 5 Zam Wesell      Clawdite    168\n 6 IG-88           Droid       200\n 7 C-3PO           Droid       167\n 8 R5-D4           Droid        97\n 9 R2-D2           Droid        96\n10 R4-P17          Droid        96\n# ℹ 77 more rows"
+  },
+  {
+    "objectID": "dplyr.html#filter",
+    "href": "dplyr.html#filter",
+    "title": "dplyr",
+    "section": "filter",
+    "text": "filter\nfilter show rows according to specified criteria\n\nstarwars %&gt;%\n    filter(species == \"Droid\") %&gt;%\n    arrange(desc(mass)) %&gt;%\n    select(name, species, homeworld, mass)\n\n# A tibble: 6 × 4\n  name   species homeworld  mass\n  &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;\n1 IG-88  Droid   &lt;NA&gt;        140\n2 C-3PO  Droid   Tatooine     75\n3 R2-D2  Droid   Naboo        32\n4 R5-D4  Droid   Tatooine     32\n5 R4-P17 Droid   &lt;NA&gt;         NA\n6 BB8    Droid   &lt;NA&gt;         NA"
+  },
+  {
+    "objectID": "dplyr.html#mutate",
+    "href": "dplyr.html#mutate",
+    "title": "dplyr",
+    "section": "mutate",
+    "text": "mutate\nYou can do operations with mutate and transmute (see on full notes)\n\nstarwars %&gt;%\n    select(name, height, mass) %&gt;%\n    filter(complete.cases(.)) %&gt;%\n    mutate(bmi = mass / ((height / 100)^2)) %&gt;% ## body mass index\n    arrange(desc(bmi))\n\n# A tibble: 59 × 4\n   name                  height  mass   bmi\n   &lt;chr&gt;                  &lt;int&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 Jabba Desilijic Tiure    175  1358 443. \n 2 Dud Bolt                  94    45  50.9\n 3 Yoda                      66    17  39.0\n 4 Owen Lars                178   120  37.9\n 5 IG-88                    200   140  35  \n 6 R2-D2                     96    32  34.7\n 7 Grievous                 216   159  34.1\n 8 R5-D4                     97    32  34.0\n 9 Jek Tono Porkins         180   110  34.0\n10 Darth Vader              202   136  33.3\n# ℹ 49 more rows"
+  },
+  {
+    "objectID": "dplyr.html#group_by-and-summarise",
+    "href": "dplyr.html#group_by-and-summarise",
+    "title": "dplyr",
+    "section": "group_by and summarise",
+    "text": "group_by and summarise\ngroup_by and summarise allows you to create summary (pivot) tables.\n\nstarwars %&gt;%\n    group_by(species) %&gt;%\n    summarise(mean_mass = mean(mass, na.rm = TRUE)) %&gt;%\n    ungroup() %&gt;%\n    arrange(desc(mean_mass))\n\n# A tibble: 38 × 2\n   species      mean_mass\n   &lt;chr&gt;            &lt;dbl&gt;\n 1 Hutt            1358  \n 2 Kaleesh          159  \n 3 Wookiee          124  \n 4 Trandoshan       113  \n 5 Besalisk         102  \n 6 Neimodian         90  \n 7 Kaminoan          88  \n 8 Nautolan          87  \n 9 Mon Calamari      83  \n10 Human             82.8\n# ℹ 28 more rows"
+  },
+  {
+    "objectID": "dplyr.html#advanced-dplyr",
+    "href": "dplyr.html#advanced-dplyr",
+    "title": "dplyr",
+    "section": "Advanced dplyr",
+    "text": "Advanced dplyr\nThere is always more to learn. Here are some examples.\n\nlead, lag to offset rows\npivot_wider, pivot_longer to transform to wide and long formats, respectively\nseparate to separate rows in a column according to separation rules (similar to Text to Columns in Excel)\n*_join to join to data tables\n\nSee extra resources section on Book of EDA."
+  },
+  {
+    "objectID": "intro.html#what-is-this-course-about",
+    "href": "intro.html#what-is-this-course-about",
+    "title": "MEF BDA 503",
+    "section": "What is this course about?",
+    "text": "What is this course about?\nThis course has a very simple objective: To teach you the ropes of exploratory data analysis pipeline.\nMainly the stages of the pipeline are\n\nImporting raw data\nPreprocessing data to prepare for analysis\nExploring and analyzing data to find valuable information\nCommunicating findings with verbal reporting, visualization and interactive tools\nMaking everything reproducible\n\nCheck similar courses from this link."
+  },
+  {
+    "objectID": "intro.html#what-are-some-examples-of-exploratory-data-analysis",
+    "href": "intro.html#what-are-some-examples-of-exploratory-data-analysis",
+    "title": "MEF BDA 503",
+    "section": "What are some examples of exploratory data analysis?",
+    "text": "What are some examples of exploratory data analysis?\nThese examples are from assignments and projects of previous years’ students.\n\nAutomotive sales data: Total sales per brand per year, domestic auto shares per brand, top sellers of 2019, Mercedes vs Volkswagen\nCredit card spending analysis: Credit Card and Debit Card Transaction Amount, Credit Card Transaction Amount by Sector, Credit Card and Debit Card Transaction Amount for Market\nBIST 30 stock analysis\nTurkish Super League analysis\nGlobal Terrorism Database analysis\n\nYou can find more examples in this post. For some short analyses you can check out #tidytuesday hashtag in Twitter and Github Repo (see this bonus also)."
+  },
+  {
+    "objectID": "intro.html#what-is-reproducibility",
+    "href": "intro.html#what-is-reproducibility",
+    "title": "MEF BDA 503",
+    "section": "What is reproducibility?",
+    "text": "What is reproducibility?\nIn simple terms, the ability to reproduce result and analysis without much effort.\nA fully reproducible analysis should include raw data and clear methodology (also, if possible, code) behind the analysis.\nThere are consequences if a study is not reproducible. Read more about reproducibility crisis here.\nSee a talk here about how to create reproducible reports with Quarto. We will learn basics of Quarto as soon as possible and do similar stuff.\nAdditionally, if you can generalize your templates, you can reproduce the study for different data sets in the same topic. It can be financial reports for companies, weather reports for cities etc. See an example here about elections (in Turkish) where each city and county’s reports are generated using a single template."
+  },
+  {
+    "objectID": "intro.html#which-tools-are-we-going-to-use-programs",
+    "href": "intro.html#which-tools-are-we-going-to-use-programs",
+    "title": "MEF BDA 503",
+    "section": "Which tools are we going to use? (Programs)",
+    "text": "Which tools are we going to use? (Programs)\nDownload checklist is below. Everything is completely free.\n\nR Programming Language to code (we will also install packages)\nRStudio Desktop as IDE (alternatively you can use VS Code or any IDE you like)\nQuarto and pandoc for document conversion\nLaTeX for PDF documents (we will not cover LaTeX notation)\n\nAlternatively you can use tiny tex\n\nGithub Desktop for codebase updates (you can use alternatives)\n\nYou will need a Github account\n\nSlack for live communication (you can also use the web client)\n\nOptional and advanced\n\nDocker for containerization (if time permits)\nGithub Copilot you can activate it for free using your student credentials\nChatGPT or Google Bard for interactive learning"
+  },
+  {
+    "objectID": "intro.html#which-tools-are-we-going-to-use-packages",
+    "href": "intro.html#which-tools-are-we-going-to-use-packages",
+    "title": "MEF BDA 503",
+    "section": "Which tools are we going to use? (Packages)",
+    "text": "Which tools are we going to use? (Packages)\nPackages are code collections which can be needed for general purpose or specific needs. You can also think of them as modules.\nR (4.3.1) has many useful packages. Our course depends on several main packages and package collections.\n\ntidyverse (2.0.0) is a very useful package collection\n\ndplyr (1.1.3) for data manipulation\nggplot2 (3.4.3) for data visualization\n\nQuarto (1.2) for document creation\nshiny (1.7.5) for interactive analysis\n\nPlus we will be using many other packages either as dependency (e.g. tibble) or as supporting packages (e.g. lubridate) during the course."
+  },
+  {
+    "objectID": "intro.html#packages-101---a-short-introduction",
+    "href": "intro.html#packages-101---a-short-introduction",
+    "title": "MEF BDA 503",
+    "section": "Packages 101 - A short introduction",
+    "text": "Packages 101 - A short introduction\nWe install packages to make them available for our use with install.packages command. You are effectively downloading the package. Remember, you need to install only once!\nOnce installed, we can make use of (load) packages with library command (You can also use require). Then we can use everything inside that package.\nAdvanced: There is an alternative way to use functions in packages. Once installed, you can directly refer to them using ::.\np.s: You can learn more about packages from this tutorial."
+  },
+  {
+    "objectID": "intro.html#datacamp-and-supplementary-online-learning",
+    "href": "intro.html#datacamp-and-supplementary-online-learning",
+    "title": "MEF BDA 503",
+    "section": "Datacamp and Supplementary Online Learning",
+    "text": "Datacamp and Supplementary Online Learning\nWe are going to make use of Datacamp courses throughout the semester.\nDatacamp for Education provides free access to Datacamp resources for 6 months. You are going to get your invitations. Datacamp usually charges monthly fees but you do not need to pay anything since you are a student of this course.\nSince this semester is completely online, we will rely more on online sources. You will have timed assignments on Datacamp but it will not affect your grade.\nOptionally you are encouraged to learn from other sources. A list will be given in a separate slide."
+  },
+  {
+    "objectID": "intro.html#github-github-classroom",
+    "href": "intro.html#github-github-classroom",
+    "title": "MEF BDA 503",
+    "section": "Github & Github Classroom",
+    "text": "Github & Github Classroom\nWe are going to use Github Classroom as the main assignment submission platform.\nAll students are going to have two repositories (where you will submit the code files) + Individual repository for their assignments + Group repository for their group assignments and group project\nInvitation links will be provided by the instructor to student email addresses.\nFirst assignment will be to set up your Github Pages. You can check the tutorial in the link (choose Project Site) but Github Classroom will handle the initial setup.\nDon’t forget to download Github Desktop. If you use Linux, try shiftkey releases.\nIMPORTANT (optional): It is highly recommended to get your Github Student Pack"
+  },
+  {
+    "objectID": "intro.html#markdown-and-quarto",
+    "href": "intro.html#markdown-and-quarto",
+    "title": "MEF BDA 503",
+    "section": "Markdown (and Quarto)",
+    "text": "Markdown (and Quarto)\nMarkdown is a special and minimal syntax “language” which is also used in Quarto documents.\nAlthough there are some changes between different types of Markdown syntax Github’s guide is a good start. It is very quick and easy to learn (takes ~5 min to get the basics and you can always use a cheatsheet).\nHere are some markdown editors as playground: Stackedit, Dillinger, jbt\nQuarto is essentially Markdown + R Code. You can start learning from here. You can use Quarto with Python and Julia as well."
+  },
+  {
+    "objectID": "intro.html#setup-checklist",
+    "href": "intro.html#setup-checklist",
+    "title": "MEF BDA 503",
+    "section": "Setup Checklist",
+    "text": "Setup Checklist\nIt is actually not very complicated :) Here is a checklist to get you started.\n\nDownload required programs and make sure they are working.\nOpen a Github account.\nOpen a Slack account.\nWhen it comes, accept Datacamp invitation.\nWhen it comes, accept Github Classroom invitation."
+  },
+  {
+    "objectID": "intro.html#course-expectations",
+    "href": "intro.html#course-expectations",
+    "title": "MEF BDA 503",
+    "section": "Course Expectations",
+    "text": "Course Expectations\nMinimal learning expectations from this course are very clearly defined.\n\nFair understanding of data manipulation (using dplyr) and data visualization (using ggplot2).\nAbility to analyze data and communicate findings with clear and coherent reporting (using quarto).\nAbility to create interactive analysis systems (using shiny).\nAbility to deploy and publish (using Github Pages and shinyapps.io).\nBasic understanding of Python & R interoperability.\n\nIt is up to the student to extend their learning experience. Both R and the data science field have much to offer. For instance, there are topics like cloud computing, package making/management, containerization, advanced modelling, process automation. There are also numerous interesting R packages making analytics life easier."
+  },
+  {
+    "objectID": "intro.html#week-course-schedule-1",
+    "href": "intro.html#week-course-schedule-1",
+    "title": "MEF BDA 503",
+    "section": "7-week Course Schedule",
+    "text": "7-week Course Schedule\nWe have lectures every second Wednesday between 18:30-21:30. Times may vary occasionally.\nTentative Schedule\nSchedule may change with progress. We can have some bonus material to cover.\nWeek 1: Setup (quarto) and Base R\nWeeks 2-3: Data Processing, Visualization and Reporting (dplyr + ggplot2)\nWeek 4: Interactive Analysis (shiny) and Packaging\nWeek 5: Data Processing, Visualization and Reporting - 2\nWeek 6: R & Python Interoperability\nWeek 7: Recap, Presentations and Final (Take Home)"
+  },
+  {
+    "objectID": "intro.html#course-medium-online-lectures",
+    "href": "intro.html#course-medium-online-lectures",
+    "title": "MEF BDA 503",
+    "section": "Course Medium: Online Lectures",
+    "text": "Course Medium: Online Lectures\n\nAt start, instructor will deliver a short lecture (15-30 mins) either live or from a recorded video.\nMost communication will be on Slack for “live support”. It means questions of any kind can be asked on Slack.\nThere might be “tasks” at each lecture to be finished within lecture hours. Most of the time it will be self-learning from a source and exercises to be finished.\nMost 3-hour lectures will be block, ending at 21:30. Since most of it will be spent with self-learning, students can arrange their own breaks.\nNo regular office hours. We will use Slack.\nWe may have guests from both academia and professional domains about data science related practices in real life problems."
+  },
+  {
+    "objectID": "intro.html#grading",
+    "href": "intro.html#grading",
+    "title": "MEF BDA 503",
+    "section": "Grading",
+    "text": "Grading\n\nIn-class exercises & Homework: 30%\n\nThere will be a number of graded exercises and homeworks. No individual weights, they will be determined as a whole\nAll homeworks should be on your public Github Pages and explicitly linked from your main Progress Journal. Otherwise, they will not be graded.\n\nGroup Project: 30%\nTake home final: 40%\nBonuses!"
+  },
+  {
+    "objectID": "intro.html#groups-and-group-project",
+    "href": "intro.html#groups-and-group-project",
+    "title": "MEF BDA 503",
+    "section": "Groups and Group Project",
+    "text": "Groups and Group Project\n\nAs a group project you will be asked to do a complete data analysis on a relevant real-life data set. Check previous examples.\nGroups should be about 4 to 5 students. Any fewer or more will not be allowed.\nYou need to form your groups next lecture, 18:30. For those without a group or groups without members, there will be a random assignment.\nOnce settled, you cannot change your group under any circumstances.\nThere will be group assignments as well."
+  },
+  {
+    "objectID": "intro.html#external-resources-streams",
+    "href": "intro.html#external-resources-streams",
+    "title": "MEF BDA 503",
+    "section": "External Resources (Streams)",
+    "text": "External Resources (Streams)\nThere are lots of fantastic resources out there. I suggest signing up for R newsletters and following people on Twitter. Static sources are on course webpage.\n\nRViews Newsletter\nr-bloggers\nR Weekly\nTidy Tuesday Hashtag\nTidy Explained\nOne R Tip a Day\n\nplus lots of people to follow on Twitter."
+  },
+  {
+    "objectID": "intro.html#use-of-gpt",
+    "href": "intro.html#use-of-gpt",
+    "title": "MEF BDA 503",
+    "section": "Use of GPT",
+    "text": "Use of GPT\nYou are definitely very much encouraged to use ChatGPT, Bard, Github Copilot and similar GPT based tools to enhance your learning."
+  },
+  {
+    "objectID": "intro.html#course-ethics",
+    "href": "intro.html#course-ethics",
+    "title": "MEF BDA 503",
+    "section": "Course “Ethics”",
+    "text": "Course “Ethics”\nThese are very simple rules to follow to ensure a fair and productive course experience.\n\nPlease do collaborate with your classmates.\nPlease do check internet and other sources for solutions. You may occasionally come across exact solutions to some homeworks and exercises but it is up to you to learn or simply paste and pass.\nPlease do not blatantly copy paste stuff and always provide references to your sources (with links). It is completely OK to “oh I found this amazing plotting code on this link and using it for my analysis”. It is actually very desirable.\n\nBut it is not OK to “Here is a complete copy paste of some guy’s analysis from Kaggle as my assignment”. It is a direct F and a report to the department.\n\nPlease do not submit the same as your classmate verbatim. Write your own code even if you peek."
+  },
+  {
+    "objectID": "intro.html#why-do-i-still-teach-r",
+    "href": "intro.html#why-do-i-still-teach-r",
+    "title": "MEF BDA 503",
+    "section": "Why do I still teach R?",
+    "text": "Why do I still teach R?\nAt some point there was a discussion to convert this course’s main language to Python or Julia.\n\nIt is super easy to grasp essentials of tidyverse and be productive on data analysis from Day 1. pandas or other libraries have no such flexibility.\nCross-skills for Quarto and Shiny with Python.\nThere is already a Python track for this program.\nJulia is nowhere as convenient.\nThis course is not about learning a language but communicating analysis.\n\nHaving said that, you are completely free to use Python as well to finish this course."
+  },
+  {
+    "objectID": "intro.html#summary",
+    "href": "intro.html#summary",
+    "title": "MEF BDA 503",
+    "section": "Summary",
+    "text": "Summary\n\nThis course is about end-to-end analytics and reproducibility.\nComplete your setup (install programs and packages, sign up for services -remember, everything is free!-).\nBuild your Github Pages webpage. Learn how to push to your repository.\nFinish your first assignment by next week.\nDetermine your group and email to instructor (group name + members) as soon as possible."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects and Project Guidelines",
+    "section": "",
+    "text": "to be updated for 2023"
+  },
+  {
+    "objectID": "projects.html#project-proposals",
+    "href": "projects.html#project-proposals",
+    "title": "Projects and Project Guidelines",
+    "section": "Project Proposals",
+    "text": "Project Proposals\nOne person for each group needs to write an email to specify the domain of their choice. They should provide a short reason about why they picked that domain, how they are going to tell a story of numbers and statistics, and finally which data sets they are going to use.\nYour analyses are expected to span over multiple data sets and multiple years. Though, you should provide a high quality narrative with striking conclusions. Therefore your analyses should not be shallow or same lame code repeated over numerous data sets (e.g., bunch of yearly averages might mean nothing). Rule of thumb is to focus on one data set and supplement the story with 2-4 more data sets.\nGood luck!"
+  },
+  {
+    "objectID": "projects.html#required-final-deliverables",
+    "href": "projects.html#required-final-deliverables",
+    "title": "Projects and Project Guidelines",
+    "section": "Required Final Deliverables",
+    "text": "Required Final Deliverables\n\nPreprocessed data in RData or rds file format. Preprocessing code and explanations in HTML.\nAn EDA analysis\nA full report in both HTML and PDF generated by Quarto\nA presentation in Quarto (bonus) or Powerpoint.\nA Shiny app (deployed to shinyapps.io)\nRehearsal video\nA Medium post (300-500 words) to introduce your project with a link to your GPJ. (details soon)\nA 30 seconds video teaser uploaded to YouTube (Bonus)"
+  },
+  {
+    "objectID": "projects.html#guidelines",
+    "href": "projects.html#guidelines",
+    "title": "Projects and Project Guidelines",
+    "section": "Guidelines",
+    "text": "Guidelines\n\nPreprocessing\n\nUse .RData (or rds) format to store your preprocessed data. And give explicit link to your RData file in your GPJ and in your reports.\n\nSome data sets need to be preprocessed before they are ready to analyze and it can take more than some steps from raw data (xlsx, csv etc.) to input data (preferable RData). Then, you can start your analysis from a clean input data.\n\nYou need to provide a preprocessing section on a separate preprocessing HTML document. Show the steps from the raw data\nBoth files should be accessible directly and explicit links should be provided.\nIt is also recommended to use eval/echo trick (i.e. eval=FALSE/echo=TRUE code block with relative path and eval=TRUE/echo=FALSE code block with true local path) to avoid hardcoded absolute paths (e.g. instead of C:/MyName/MyDocuments/myfile.csv we shall see pjournal.github.io/mygroup/myfile.csv).\n\n\n\nExploratory Data Analysis\nBefore giving your report a final shape, prepare an EDA report. In this document, you will be exploring as the name suggests. You will not be required to do any analysis and deductions, but you are asked to give a full picture of the data (what the columns mean, how the values are distributed, some ideas about the possible analyses). Keep it not long and add some plots. It is like a rehearsal to your full report.\n\n\nReport\n\nYou can use any tool that is taught within the course or outside the course to enhance the “storytelling”. You are required to use Quarto HTML outputs at least to show your work on the Group Progress Journal (GPJ). It means you are not confined to dplyr+ggplot2. For instance, you may use data.table + dygraphs if you want to. (It is possible to get a bonus if the result is really good!)\nAdd more content to your analysis than code. Explain in not just code and plots but also in words. Make code available but collapsible if possible. (see example)\nStyling and coherence of your GPJ and analysis is also important. You should prepare your analyses as you are preparing for the board. Minimal typos, neat structure and no long running data output in your final reports. Styling is 35%. Good styling is up to 15% bonus. Bad styling can affect your grade by -20% regardless of the content.\nImportant! Add Key Takeaways section to the top. It should contain no less than 3 and no more than 5 bullet points about your study. Key items include what is the topic and data used (link to both source raw data and analysis data), what aspects are important and what results are interesting, finally what is the main outcome.\nAbout your GPJ’s: Please keep them clean and in a good UX order. Put your names, title of the project, and a brief description on the main page of the GPJ. A very good example is https://pjournal.github.io/mef04g-rhapsody/. Also, you can always improve.\nPut a small paragraph explaining your project in your GPJs right under its title section. Example on hypothetical ISBIKE project.\nGroup Project: ISBIKE Analysis\nWe use bicycle station and utilization data of Istanbul Metropolitan Municipality bicycle services ISBIKE. Main objective of our analysis is to find out actionable insights about the placement and replenishment of bikes. These insights might help the municipality with their ISBIKE expansion plans to new locations and improve their services.\nPlease also put a PDF version of your final analysis on your GPJ.\nState your phases in different links. Make it very easy for the user to navigate your GPJ. User experience matters.\nEthics rule: Good artists copy, best artists steal. Nevertheless, if you copy some code or idea from somewhere, please indicate the source explicitly with a direct link. It is never embarassing to adapt a good idea to a new use and tell about your source. Though, it is quite embarassing to be exposed. Referencing is encouraged, up to 10% bonus for good references.\n\n\n\nShiny App\n\nYou are also required to prepare a Shiny app and present an interactive environment. You should also make it very easy for the others to run your app via shiny::runGitHub function and deploy it to shinyapps.io (one per group is enough).\nDon’t forget to provide link of your Shiny apps on shinyapps.io in your GPJ\nTry to stick to first deadline so in any case you will have some slack to reevaluate.\n\n\n\nPresentation\n\nUpload your presentation to your GPJ. Consider going {quarto}. Adding a pdf version is recommended.\nState clearly who the group members are and either give a link to your progress journals or Linkedin profiles.\nImportant! Presentation Rehearsals You need to submit a rehearsal video by the deadline. 10% of your project points will come from rehearsal videos. There are two prerequisites. It should be under 15 minutes (strict) and it should cover most of your actual presentation. This is a rehearsal so you don’t need to care much about perfection. Try to make it look good but do not spend a lot of time on retakes. Send videos directly to my email. It is not required to publish them on your GPJ (but it is allowed if you want to).\n\n\n\nBlog Post (Medium)\n\nBriefly describe your project in a blog post fashion. Do not include code, just describe your project clearly and give a link to your analysis and your GPJ main page. Also provide a link to your blog post in your GPJs.\nSelect one representative in each group to submit to EDA Journal, “official” blog of BDA 503. Send an email to your instructor with your group name and the medium username of the representative.\nSubmit the article to EDA Journal (help). Your instructor will review and publish it. Then you may add the link to your GPH.\n\n\n\nTeaser\n\nBONUS: Prepare a (max) 30 second teaser about your project to be published in your GPJs. Put the video file on your repository and on Youtube. - Provide a link (or embed) in your GPJ and Medium post. See how to embed Youtube in your Markdown file https://stackoverflow.com/a/54209100/3608936 (Recommendation: For videos you can use Zoom’s screen recording. It is simple and high quality enough.)\nRehearsal video is not a teaser."
+  },
+  {
+    "objectID": "projects.html#grading-weights-total-110",
+    "href": "projects.html#grading-weights-total-110",
+    "title": "Projects and Project Guidelines",
+    "section": "Grading Weights (Total 110%)",
+    "text": "Grading Weights (Total 110%)\n\nPreprocessing Data and Report (10%)\nExploratory Data Analysis (20%)\nFinal Project and Presentation (Rehearsal included) (45%)\nShiny App (15%)\nMedium Post (10%)\nBONUS: Teaser (10%)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About BDA 503",
+    "section": "",
+    "text": "Course Name: Data Analytics Essentials\nCourse Code: BDA 503\nProgram: Big Data Analytics Grad Program\nUniversity: MEF University\nCourse Instructor of Fall 2023: Berk Orbay\nClick here for more information."
+  }
+]
