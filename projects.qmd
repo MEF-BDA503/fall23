@@ -2,26 +2,51 @@
 title: "Projects and Project Guidelines"
 ---
 
-__to be updated for 2023__
+# Introduction
+
+You are going to apply all you have learned in this lecture on a real life data analysis project. Each year has a theme and each group is supposed to use a comprehensive dataset from a source. You are going to learn by yourself,
+
+- How to extract data
+- How to preprocess
+- How to analyze
+- How to communicate and present your findings
 
 # Phases and Deadlines
 
-- Project Proposal (XXXX)
-- Preparation of the preprocessed data (XXXX)
-- Exploratory Data Analysis (XXXX)
-- Rehearsal (XXXX)
-- Blog Post & Teaser (XXXX)
-- Final Project and Presentation (XXXX)
+- Project Proposal (Nov 9, 2023)
+- Preparation of the preprocessed data (Nov 16, 2023)
+- Exploratory Data Analysis (Dec 14, 2023)
+- Rehearsal (Dec 28, 2023)
+- Blog Post & Teaser (Dec 28, 2023)
+- Final Project and Presentation (Jan 4, 2024)
 
-Final deadline is strict, but you will be able to revise your final project document.
+::: {.callout-caution title="Important"}
+Final presentation deadline is strict, but you will be able to revise your final project document.
+:::
 
 # Potential Projects and Proposals
 
-This year's theme is **TBD**. 
+This year's theme is "Türkiye compared to X". Here are the candidate data sources (domains).
+
++ [World Development Indicators (World Bank)](https://datatopics.worldbank.org/world-development-indicators/)
++ [PISA (Education)](https://www.oecd.org/pisa/data/httpoecdorgpisadatabase-instructions.htm)
++ [Global Dietary Database (Nutrition)](https://www.globaldietarydatabase.org/available-gdd-2018-estimates-datafiles)
++ [World Integrated Trade Solution (World Bank)](https://wits.worldbank.org/)
+
+Each team will choose one data source and propose a project. Almost each data set, has a corresponding R package or R code. Otherwise there are download options. See the following links for some example solutions.
+
++ [WDI](https://data.worldbank.org/products/third-party-apps)
++ PISA [I](https://cran.r-project.org/web/packages/intsvy/) - [II](https://cran.r-project.org/web/packages/learningtower/)
++ [GDD](https://www.globaldietarydatabase.org/data-download)
++ [WITS](https://docs.ropensci.org/tradestatistics/articles/basic-usage.html)
+
+::: {.callout-caution title="Important"}
+**No two teams are allowed on the same source. First come first served (with your Project Proposals).**
+:::
 
 ## Project Proposals
 
-One person for each group needs to write an email to specify the domain of their choice. They should provide a short reason about why they picked that domain, how they are going to tell a story of numbers and statistics, and finally which data sets they are going to use.
+One person for each group needs to **write an email** to specify the domain of their choice. They should provide a short reason about why they picked that domain, how they are going to tell a story of numbers and statistics, and finally which data sets they are going to use.
 
 Your analyses are expected to span over multiple data sets and multiple years. Though, you should provide a high quality narrative with striking conclusions. Therefore your analyses **should not be** shallow or same lame code repeated over numerous data sets (e.g., bunch of yearly averages might mean nothing). Rule of thumb is to focus on one data set and supplement the story with 2-4 more data sets.
 
@@ -31,10 +56,11 @@ Good luck!
 
 **After your project proposal is accepted you need to prepare your projects according to these guidelines.**
 
-This document contains documentation and guidelines about the group project. You are expected to perform analysis with R on a real data set about Turkey and present your findings on your Group Progress Journals using Quarto and Shiny. At the end of the group project you are expected to prepare a full report about your data and do a 15-minute presentation in class.
+This document contains documentation and guidelines about the group project. You are expected to perform analysis with R on a real data set about Türkiye and present your findings on your Group Progress Journals using Quarto and Shiny. At the end of the group project you are expected to prepare a full report about your data and do a 15-minute presentation in class.
 
+::: {.callout-caution title="Important"}
 There might be addition to this guidelines, keep an eye on the updates.
-
+:::
 
 ## Required Final Deliverables
 
@@ -44,7 +70,7 @@ There might be addition to this guidelines, keep an eye on the updates.
 - A presentation in Quarto (bonus) or Powerpoint.
 - A Shiny app (deployed to shinyapps.io)
 - Rehearsal video
-- A Medium post (300-500 words) to introduce your project with a link to your GPJ. (details soon)
+- A Medium post (300-500 words) to introduce your project with a link to your GPJ.
 - A 30 seconds video teaser uploaded to YouTube (Bonus)
 
 
@@ -64,7 +90,7 @@ Some data sets need to be preprocessed before they are ready to analyze and it c
 
 ### Exploratory Data Analysis
 
-Before giving your report a final shape, prepare an EDA report. In this document, you will be exploring as the name suggests. You will not be required to do any analysis and deductions, but you are asked to give a full picture of the data (what the columns mean, how the values are distributed, some ideas about the possible analyses). Keep it not long and add some plots. It is like a rehearsal to your full report.
+Before giving your report a final shape, prepare an EDA report. In this document, you will be exploring as the name suggests. You will not be required to do any analysis and deductions, but you are asked to give a full picture of the data (what the columns mean, how the values are distributed, some ideas about the possible analyses). Keep it "not long" and add some plots. It is like a rehearsal to your full report.
 
 ### Report
 
@@ -78,11 +104,13 @@ Before giving your report a final shape, prepare an EDA report. In this document
 
 - About your GPJ’s: Please keep them clean and in a good UX order. Put your names, title of the project, and a brief description on the main page of the GPJ. A very good example is https://pjournal.github.io/mef04g-rhapsody/. Also, you can always improve.
 
-- Put a small paragraph explaining your project in your GPJs right under its title section. Example on hypothetical ISBIKE project.
+- Put a small paragraph explaining your project in your GPJs right under its title section. 
 
-  Group Project: ISBIKE Analysis
+  ::: {.callout-note title="Example on hypothetical ISBIKE project."}
+  **Group Project: ISBIKE Analysis**
 
   We use bicycle station and utilization data of Istanbul Metropolitan Municipality bicycle services ISBIKE. Main objective of our analysis is to find out actionable insights about the placement and replenishment of bikes. These insights might help the municipality with their ISBIKE expansion plans to new locations and improve their services.
+  :::
 
 - Please also put a PDF version of your final analysis on your GPJ.
 
@@ -94,17 +122,24 @@ Before giving your report a final shape, prepare an EDA report. In this document
 
 - You are also required to prepare a Shiny app and present an interactive environment. You should also make it very easy for the others to run your app via shiny::runGitHub function and deploy it to shinyapps.io (one per group is enough).
 
-- Don’t forget to provide link of your Shiny apps on shinyapps.io in your GPJ
+- Don’t forget to provide link of your [ShinyApps](https://shinyapps.io) in your GPJ
 
-- Try to stick to first deadline so in any case you will have some slack to reevaluate.
+::: {.callout-tip title="Example on hypothetical ISBIKE project."}
+Try to stick to first deadline; so, in any case you will have some slack to reevaluate.
+:::
 
 ### Presentation
 
-- Upload your presentation to your GPJ. Consider going {quarto}. Adding a pdf version is recommended.
+- Upload your presentation to your GPJ. Consider going `{quarto}`. Adding a pdf version is recommended.
 
 - State clearly who the group members are and either give a link to your progress journals or Linkedin profiles.
 
-- **Important! Presentation Rehearsals** You need to submit a rehearsal video by the deadline. 10% of your project points will come from rehearsal videos. There are two prerequisites. It should be under 15 minutes (strict) and it should cover most of your actual presentation. This is a rehearsal so you don’t need to care much about perfection. Try to make it look good but do not spend a lot of time on retakes. Send videos directly to my email. It is not required to publish them on your GPJ (but it is allowed if you want to).
+::: {.callout-caution title="Important! Presentation Rehearsals"}
+**You need to submit a rehearsal video by the deadline.** 10% of your project points will come from rehearsal videos. There are two prerequisites. 
+
++ It should be under 15 minutes (strict) and it should cover most of your actual presentation. This is a rehearsal so you don’t need to care much about perfection. Try to make it look good but do not spend a lot of time on retakes. 
++ **Send videos directly to my email**. It is _not required_ to publish them on your GPJ (but **it is encouraged** if you want to).
+:::
 
 ### Blog Post (Medium)
 

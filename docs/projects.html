@@ -121,7 +121,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#phases-and-deadlines" id="toc-phases-and-deadlines" class="nav-link active" data-scroll-target="#phases-and-deadlines">Phases and Deadlines</a></li>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#phases-and-deadlines" id="toc-phases-and-deadlines" class="nav-link" data-scroll-target="#phases-and-deadlines">Phases and Deadlines</a></li>
   <li><a href="#potential-projects-and-proposals" id="toc-potential-projects-and-proposals" class="nav-link" data-scroll-target="#potential-projects-and-proposals">Potential Projects and Proposals</a>
   <ul class="collapse">
   <li><a href="#project-proposals" id="toc-project-proposals" class="nav-link" data-scroll-target="#project-proposals">Project Proposals</a></li>
@@ -164,25 +165,72 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>to be updated for 2023</strong></p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>You are going to apply all you have learned in this lecture on a real life data analysis project. Each year has a theme and each group is supposed to use a comprehensive dataset from a source. You are going to learn by yourself,</p>
+<ul>
+<li>How to extract data</li>
+<li>How to preprocess</li>
+<li>How to analyze</li>
+<li>How to communicate and present your findings</li>
+</ul>
+</section>
 <section id="phases-and-deadlines" class="level1">
 <h1>Phases and Deadlines</h1>
 <ul>
-<li>Project Proposal (XXXX)</li>
-<li>Preparation of the preprocessed data (XXXX)</li>
-<li>Exploratory Data Analysis (XXXX)</li>
-<li>Rehearsal (XXXX)</li>
-<li>Blog Post &amp; Teaser (XXXX)</li>
-<li>Final Project and Presentation (XXXX)</li>
+<li>Project Proposal (Nov 9, 2023)</li>
+<li>Preparation of the preprocessed data (Nov 16, 2023)</li>
+<li>Exploratory Data Analysis (Dec 14, 2023)</li>
+<li>Rehearsal (Dec 28, 2023)</li>
+<li>Blog Post &amp; Teaser (Dec 28, 2023)</li>
+<li>Final Project and Presentation (Jan 4, 2024)</li>
 </ul>
-<p>Final deadline is strict, but you will be able to revise your final project document.</p>
+<div class="callout callout-style-default callout-caution callout-titled" title="Important">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Final presentation deadline is strict, but you will be able to revise your final project document.</p>
+</div>
+</div>
 </section>
 <section id="potential-projects-and-proposals" class="level1">
 <h1>Potential Projects and Proposals</h1>
-<p>This year’s theme is <strong>TBD</strong>.</p>
+<p>This year’s theme is “Türkiye compared to X”. Here are the candidate data sources (domains).</p>
+<ul>
+<li><a href="https://datatopics.worldbank.org/world-development-indicators/">World Development Indicators (World Bank)</a></li>
+<li><a href="https://www.oecd.org/pisa/data/httpoecdorgpisadatabase-instructions.htm">PISA (Education)</a></li>
+<li><a href="https://www.globaldietarydatabase.org/available-gdd-2018-estimates-datafiles">Global Dietary Database (Nutrition)</a></li>
+<li><a href="https://wits.worldbank.org/">World Integrated Trade Solution (World Bank)</a></li>
+</ul>
+<p>Each team will choose one data source and propose a project. Almost each data set, has a corresponding R package or R code. Otherwise there are download options. See the following links for some example solutions.</p>
+<ul>
+<li><a href="https://data.worldbank.org/products/third-party-apps">WDI</a></li>
+<li>PISA <a href="https://cran.r-project.org/web/packages/intsvy/">I</a> - <a href="https://cran.r-project.org/web/packages/learningtower/">II</a></li>
+<li><a href="https://www.globaldietarydatabase.org/data-download">GDD</a></li>
+<li><a href="https://docs.ropensci.org/tradestatistics/articles/basic-usage.html">WITS</a></li>
+</ul>
+<div class="callout callout-style-default callout-caution callout-titled" title="Important">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>No two teams are allowed on the same source. First come first served (with your Project Proposals).</strong></p>
+</div>
+</div>
 <section id="project-proposals" class="level2">
 <h2 class="anchored" data-anchor-id="project-proposals">Project Proposals</h2>
-<p>One person for each group needs to write an email to specify the domain of their choice. They should provide a short reason about why they picked that domain, how they are going to tell a story of numbers and statistics, and finally which data sets they are going to use.</p>
+<p>One person for each group needs to <strong>write an email</strong> to specify the domain of their choice. They should provide a short reason about why they picked that domain, how they are going to tell a story of numbers and statistics, and finally which data sets they are going to use.</p>
 <p>Your analyses are expected to span over multiple data sets and multiple years. Though, you should provide a high quality narrative with striking conclusions. Therefore your analyses <strong>should not be</strong> shallow or same lame code repeated over numerous data sets (e.g., bunch of yearly averages might mean nothing). Rule of thumb is to focus on one data set and supplement the story with 2-4 more data sets.</p>
 <p>Good luck!</p>
 </section>
@@ -190,8 +238,20 @@ ul.task-list li input[type="checkbox"] {
 <section id="project-guidelines" class="level1">
 <h1>Project Guidelines</h1>
 <p><strong>After your project proposal is accepted you need to prepare your projects according to these guidelines.</strong></p>
-<p>This document contains documentation and guidelines about the group project. You are expected to perform analysis with R on a real data set about Turkey and present your findings on your Group Progress Journals using Quarto and Shiny. At the end of the group project you are expected to prepare a full report about your data and do a 15-minute presentation in class.</p>
+<p>This document contains documentation and guidelines about the group project. You are expected to perform analysis with R on a real data set about Türkiye and present your findings on your Group Progress Journals using Quarto and Shiny. At the end of the group project you are expected to prepare a full report about your data and do a 15-minute presentation in class.</p>
+<div class="callout callout-style-default callout-caution callout-titled" title="Important">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
 <p>There might be addition to this guidelines, keep an eye on the updates.</p>
+</div>
+</div>
 <section id="required-final-deliverables" class="level2">
 <h2 class="anchored" data-anchor-id="required-final-deliverables">Required Final Deliverables</h2>
 <ul>
@@ -201,7 +261,7 @@ ul.task-list li input[type="checkbox"] {
 <li>A presentation in Quarto (bonus) or Powerpoint.</li>
 <li>A Shiny app (deployed to shinyapps.io)</li>
 <li>Rehearsal video</li>
-<li>A Medium post (300-500 words) to introduce your project with a link to your GPJ. (details soon)</li>
+<li>A Medium post (300-500 words) to introduce your project with a link to your GPJ.</li>
 <li>A 30 seconds video teaser uploaded to YouTube (Bonus)</li>
 </ul>
 </section>
@@ -221,7 +281,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="exploratory-data-analysis" class="level3">
 <h3 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h3>
-<p>Before giving your report a final shape, prepare an EDA report. In this document, you will be exploring as the name suggests. You will not be required to do any analysis and deductions, but you are asked to give a full picture of the data (what the columns mean, how the values are distributed, some ideas about the possible analyses). Keep it not long and add some plots. It is like a rehearsal to your full report.</p>
+<p>Before giving your report a final shape, prepare an EDA report. In this document, you will be exploring as the name suggests. You will not be required to do any analysis and deductions, but you are asked to give a full picture of the data (what the columns mean, how the values are distributed, some ideas about the possible analyses). Keep it “not long” and add some plots. It is like a rehearsal to your full report.</p>
 </section>
 <section id="report" class="level3">
 <h3 class="anchored" data-anchor-id="report">Report</h3>
@@ -231,9 +291,21 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Styling and coherence of your GPJ and analysis is also important. You should prepare your analyses as you are preparing for the board. Minimal typos, neat structure and no long running data output in your final reports. Styling is 35%. Good styling is up to 15% bonus. Bad styling can affect your grade by -20% regardless of the content.</p></li>
 <li><p>Important! Add Key Takeaways section to the top. It should contain no less than 3 and no more than 5 bullet points about your study. Key items include what is the topic and data used (link to both source raw data and analysis data), what aspects are important and what results are interesting, finally what is the main outcome.</p></li>
 <li><p>About your GPJ’s: Please keep them clean and in a good UX order. Put your names, title of the project, and a brief description on the main page of the GPJ. A very good example is https://pjournal.github.io/mef04g-rhapsody/. Also, you can always improve.</p></li>
-<li><p>Put a small paragraph explaining your project in your GPJs right under its title section. Example on hypothetical ISBIKE project.</p>
-<p>Group Project: ISBIKE Analysis</p>
-<p>We use bicycle station and utilization data of Istanbul Metropolitan Municipality bicycle services ISBIKE. Main objective of our analysis is to find out actionable insights about the placement and replenishment of bikes. These insights might help the municipality with their ISBIKE expansion plans to new locations and improve their services.</p></li>
+<li><p>Put a small paragraph explaining your project in your GPJs right under its title section.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="Example on hypothetical ISBIKE project.">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example on hypothetical ISBIKE project.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Group Project: ISBIKE Analysis</strong></p>
+<p>We use bicycle station and utilization data of Istanbul Metropolitan Municipality bicycle services ISBIKE. Main objective of our analysis is to find out actionable insights about the placement and replenishment of bikes. These insights might help the municipality with their ISBIKE expansion plans to new locations and improve their services.</p>
+</div>
+</div></li>
 <li><p>Please also put a PDF version of your final analysis on your GPJ.</p></li>
 <li><p>State your phases in different links. Make it very easy for the user to navigate your GPJ. User experience matters.</p></li>
 <li><p>Ethics rule: Good artists copy, best artists steal. Nevertheless, if you copy some code or idea from somewhere, please indicate the source explicitly with a direct link. It is never embarassing to adapt a good idea to a new use and tell about your source. Though, it is quite embarassing to be exposed. Referencing is encouraged, up to 10% bonus for good references.</p></li>
@@ -243,17 +315,45 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="shiny-app">Shiny App</h3>
 <ul>
 <li><p>You are also required to prepare a Shiny app and present an interactive environment. You should also make it very easy for the others to run your app via shiny::runGitHub function and deploy it to shinyapps.io (one per group is enough).</p></li>
-<li><p>Don’t forget to provide link of your Shiny apps on shinyapps.io in your GPJ</p></li>
-<li><p>Try to stick to first deadline so in any case you will have some slack to reevaluate.</p></li>
+<li><p>Don’t forget to provide link of your <a href="https://shinyapps.io">ShinyApps</a> in your GPJ</p></li>
 </ul>
+<div class="callout callout-style-default callout-tip callout-titled" title="Example on hypothetical ISBIKE project.">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Example on hypothetical ISBIKE project.
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Try to stick to first deadline; so, in any case you will have some slack to reevaluate.</p>
+</div>
+</div>
 </section>
 <section id="presentation" class="level3">
 <h3 class="anchored" data-anchor-id="presentation">Presentation</h3>
 <ul>
-<li><p>Upload your presentation to your GPJ. Consider going {quarto}. Adding a pdf version is recommended.</p></li>
+<li><p>Upload your presentation to your GPJ. Consider going <code>{quarto}</code>. Adding a pdf version is recommended.</p></li>
 <li><p>State clearly who the group members are and either give a link to your progress journals or Linkedin profiles.</p></li>
-<li><p><strong>Important! Presentation Rehearsals</strong> You need to submit a rehearsal video by the deadline. 10% of your project points will come from rehearsal videos. There are two prerequisites. It should be under 15 minutes (strict) and it should cover most of your actual presentation. This is a rehearsal so you don’t need to care much about perfection. Try to make it look good but do not spend a lot of time on retakes. Send videos directly to my email. It is not required to publish them on your GPJ (but it is allowed if you want to).</p></li>
 </ul>
+<div class="callout callout-style-default callout-caution callout-titled" title="Important! Presentation Rehearsals">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important! Presentation Rehearsals
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>You need to submit a rehearsal video by the deadline.</strong> 10% of your project points will come from rehearsal videos. There are two prerequisites.</p>
+<ul>
+<li>It should be under 15 minutes (strict) and it should cover most of your actual presentation. This is a rehearsal so you don’t need to care much about perfection. Try to make it look good but do not spend a lot of time on retakes.</li>
+<li><strong>Send videos directly to my email</strong>. It is <em>not required</em> to publish them on your GPJ (but <strong>it is encouraged</strong> if you want to).</li>
+</ul>
+</div>
+</div>
 </section>
 <section id="blog-post-medium" class="level3">
 <h3 class="anchored" data-anchor-id="blog-post-medium">Blog Post (Medium)</h3>
