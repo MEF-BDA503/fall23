@@ -1,0 +1,111 @@
+---
+title: "ggplot2"
+subtitle: "Quick Introduction"
+author: "Berk Orbay"
+institute: "MEF BDA 503"
+format: 
+    revealjs:
+        smaller: true
+---
+
+## What is dplyr?
+
+`ggplot2` is an R package specialized on data visualization. It is both a companion to the `dplyr` data manipulation package and a whole library by itself. Within a well defined framework, you can
+
++ easily draw a large number plot types with the same methodology
++ draw sophisticated plots
++ multiple well adjusted plots (e.g, 2x2)
++ do advanced theming and custom theming
++ parametric plots
+
+ 
+\ 
+
+Official page: <https://ggplot2.tidyverse.org/>
+
+## Why ggplot2?
+
+`ggplot2` has the same UX in mind with `dplyr` and is being developed by the same person (Hadley Wickham) and their team.
+
++ Based on Grammar of Graphics (hence the "gg").
++ Start with a "canvas" (`ggplot()`) and apply data (`aes(x,y,color)`) and layers (`geom_*`) on it
++ Add labels, annotations, titles, themes easily.
+
+# Fundamentals
+
+**Important** Full notes are on [Book of EDA](https://berkorbay.github.io/book-of-eda/ggplot2.html)
+
+\
+
+```{r}
+#| eval: true
+#| echo: true
+
+##  If you have never installed ggplot2 before
+##  install.packages("tidyverse")
+
+##  First load the library
+##  We will also use dplyr therefore tidyverse is better
+library(tidyverse)
+
+## We are going to use starwars datasets to show examples
+starwars
+```
+
+Let's recall `starwars` tibble from `dplyr`.
+
+## Scatterplot `geom_point`
+
+`select` simply displays columns
+
+```{r}
+#| eval: true
+#| echo: true
+
+ggplot(starwars %>% select(name, height, mass) %>% filter(mass < 1000) %>% filter(complete.cases(.)), aes(x = height, y = mass)) +
+    geom_point()
+```
+
+We use `+` instead of the pipe operator (`%>%`) to connect layers.
+
+## Scatterplot (cont.) `geom_point`
+
+Let's add some categorization with `color`.
+
+```{r}
+#| eval: true
+#| echo: true
+
+ggplot(starwars %>% select(name, species, height, mass) %>% filter(mass < 1000) %>% filter(complete.cases(.)), aes(x = height, y = mass)) +
+    geom_point(aes(color = species))
+```
+
+## Scatterplot (cont.) `geom_point`
+
+Let's also add some labels and themes.
+
+```{r}
+#| eval: true
+#| echo: true
+
+ggplot(starwars %>% select(name, species, height, mass) %>% filter(mass < 1000) %>% filter(complete.cases(.)), aes(x = height, y = mass)) +
+    geom_point(aes(color = species)) +
+    labs(title = "Star Wars Characters by Height and Mass", subtitle = "Colors by species", x = "Height (in meters)", y = "Mass (in KG)", color = "Species") +
+    theme_minimal() +
+    theme(legend.position = "bottom")
+```
+
+
+## Advanced `ggplot2`
+
+There is always more to learn. Here are some examples.
+
++ `facet_grid` for multiple plots ([see](https://ggplot2.tidyverse.org/reference/facet_grid.html)).
++ `scale_*` functions for fine tuning labels, axes etc.
++ custom themes
+
+See extra resources section on Book of EDA.
+
+# Thanks!
+
+Course webpage [https://mef-bda503.github.io/](https://mef-bda503.github.io/).

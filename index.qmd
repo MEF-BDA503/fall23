@@ -5,7 +5,34 @@ toc: false
 
 # Week 3
 
-Coming soon...
+- [Introduction to ggplot2](./ggplot2.html)
+- [ggplot2 Lecture Notes](https://berkorbay.github.io/book-of-eda/ggplot2.html)
+- [ggplot2 official page and cheat sheet](https://ggplot2.tidyverse.org/)
+
+::: {.callout-caution title="In-Class Exercise (Individual)" collapse="false"}
+Update your analysis using both `dplyr` and `ggplot2` on your proposed data sets in Assignment 1. Open a new \.qmd document named `inclass2.qmd` and make it visible on your PJ (update `_quarto.yml` file). (DO NOT TOUCH `inclass1.qmd`)
+:::
+
+::: {.callout-caution title="Group Assignment (Tentative)" collapse="false"}
+Deadline (TBA)
+Use Global Dietary Database and prepare a brief exploratory data analysis using `dplyr` and `ggplot2`.
+
++ [Global Dietary Database (Nutrition)](https://www.globaldietarydatabase.org/)
+    + [Data](https://www.globaldietarydatabase.org/data-download)
+:::
+
+
+::: {.callout-tip title="Bonus Material" collapse="true"}
+- *Supplementary resources*
+    - [ggplot2 Cheat Sheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)
+    - [Step by step ggplot2 introduction (5min)](https://www.youtube.com/watch?v=FdVy57oGJuc)
+    - [{ggplot2} ile Veri Görselleştirme (Turkish)](https://www.youtube.com/watch?v=QB8OXAzL8QE)
+    - [Improve ggplot2 visualization](https://www.youtube.com/watch?v=qnw1xDnt_Ec)
+    - [Detailed YouTube course](https://www.youtube.com/playlist?list=PLtL57Fdbwb_C6RS0JtBojTNOMVlgpeJkS)
+- Voluntary Self Exercise (YOK Foreign Students by Nationality Data Set)
+    - Download Data ([xlsx](https://github.com/berkorbay/datasets/raw/master/foreign_students/foreign_students_by_nationality_2021_2022.xlsx))
+    - Starter Code ([gist](https://gist.github.com/berkorbay/f394bf2ea8775cf7b5316aeafd27c482#file-foreign_students_report_starter_code-qmd))
+:::
 
 # Week 2
 
@@ -15,6 +42,7 @@ Coming soon...
     - [dplyr Cheat Sheet](https://raw.githubusercontent.com/rstudio/cheatsheets/main/data-transformation.pdf)
     - [Book: R for Data Science](https://r4ds.had.co.nz/) by Hadley Wickham & Garrett Grolemund
     - [dplyr with Election Data](https://pjournal.github.io/files/dplyr_elections.html)
+
 
 ::: {.callout-tip title="Bonus Material" collapse="true"}
 - Turkish dplyr R resource: [Eskişehir R User Group](https://www.youtube.com/watch?v=bzrP5bOIyYI)
