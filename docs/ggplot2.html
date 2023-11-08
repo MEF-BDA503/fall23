@@ -464,8 +464,8 @@ Berk Orbay
 </div>
 <p>Let’s recall <code>starwars</code> tibble from <code>dplyr</code>.</p>
 </section>
-<section id="scatterplot-geom_point" class="slide level2">
-<h2>Scatterplot <code>geom_point</code></h2>
+<section id="scatter-plot-geom_point" class="slide level2">
+<h2>Scatter plot <code>geom_point</code></h2>
 <p><code>select</code> simply displays columns</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">ggplot</span>(starwars <span class="sc">%&gt;%</span> <span class="fu">select</span>(name, height, mass) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(mass <span class="sc">&lt;</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">complete.cases</span>(.)), <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass)) <span class="sc">+</span></span>
@@ -474,8 +474,8 @@ Berk Orbay
 </div>
 <img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"><p>We use <code>+</code> instead of the pipe operator (<code>%&gt;%</code>) to connect layers.</p>
 </section>
-<section id="scatterplot-cont.-geom_point" class="slide level2">
-<h2>Scatterplot (cont.) <code>geom_point</code></h2>
+<section id="scatter-plot-cont.-geom_point" class="slide level2">
+<h2>Scatter plot (cont.) <code>geom_point</code></h2>
 <p>Let’s add some categorization with <code>color</code>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">ggplot</span>(starwars <span class="sc">%&gt;%</span> <span class="fu">select</span>(name, species, height, mass) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(mass <span class="sc">&lt;</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">complete.cases</span>(.)), <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass)) <span class="sc">+</span></span>
@@ -483,8 +483,8 @@ Berk Orbay
 
 </div>
 <img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
-<section id="scatterplot-cont.-geom_point-1" class="slide level2">
-<h2>Scatterplot (cont.) <code>geom_point</code></h2>
+<section id="scatter-plot-cont.-geom_point-1" class="slide level2">
+<h2>Scatter plot (cont.) <code>geom_point</code></h2>
 <p>Let’s also add some labels and themes.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">ggplot</span>(starwars <span class="sc">%&gt;%</span> <span class="fu">select</span>(name, species, height, mass) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(mass <span class="sc">&lt;</span> <span class="dv">1000</span>) <span class="sc">%&gt;%</span> <span class="fu">filter</span>(<span class="fu">complete.cases</span>(.)), <span class="fu">aes</span>(<span class="at">x =</span> height, <span class="at">y =</span> mass)) <span class="sc">+</span></span>
@@ -495,13 +495,132 @@ Berk Orbay
 
 </div>
 <img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="line-plot-geom_line" class="slide level2">
+<h2>Line plot <code>geom_line</code></h2>
+<p>Let’s use another data for line plot, <code>EUStockMarkets</code> data from base R.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>stock_df <span class="ot">&lt;-</span> <span class="fu">as_tibble</span>(EuStockMarkets) <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">date =</span> lubridate<span class="sc">::</span><span class="fu">as_date</span>(<span class="st">"1991-01-01"</span>) <span class="sc">+</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.), <span class="at">.before =</span> <span class="fu">everything</span>())</span>
+<span id="cb6-2"><a href="#cb6-2"></a><span class="fu">print</span>(stock_df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,860 × 5
+   date         DAX   SMI   CAC  FTSE
+   &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 1991-01-02 1629. 1678. 1773. 2444.
+ 2 1991-01-03 1614. 1688. 1750. 2460.
+ 3 1991-01-04 1607. 1679. 1718  2448.
+ 4 1991-01-05 1621. 1684. 1708. 2470.
+ 5 1991-01-06 1618. 1687. 1723. 2485.
+ 6 1991-01-07 1611. 1672. 1714. 2467.
+ 7 1991-01-08 1631. 1683. 1734. 2488.
+ 8 1991-01-09 1640. 1704. 1757. 2508.
+ 9 1991-01-10 1635. 1698. 1754  2510.
+10 1991-01-11 1646. 1716. 1754. 2497.
+# ℹ 1,850 more rows</code></pre>
+</div>
+</div>
+<p>Let’s also make it more “plotable”.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>stock_df_long <span class="ot">&lt;-</span> stock_df <span class="sc">%&gt;%</span> <span class="fu">pivot_longer</span>(<span class="sc">-</span>date,<span class="at">names_to=</span><span class="st">"symbol"</span>,<span class="at">values_to=</span><span class="st">"close"</span>)</span>
+<span id="cb8-2"><a href="#cb8-2"></a><span class="fu">print</span>(stock_df_long)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 7,440 × 3
+   date       symbol close
+   &lt;date&gt;     &lt;chr&gt;  &lt;dbl&gt;
+ 1 1991-01-02 DAX    1629.
+ 2 1991-01-02 SMI    1678.
+ 3 1991-01-02 CAC    1773.
+ 4 1991-01-02 FTSE   2444.
+ 5 1991-01-03 DAX    1614.
+ 6 1991-01-03 SMI    1688.
+ 7 1991-01-03 CAC    1750.
+ 8 1991-01-03 FTSE   2460.
+ 9 1991-01-04 DAX    1607.
+10 1991-01-04 SMI    1679.
+# ℹ 7,430 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="line-plot-cont.-geom_line" class="slide level2">
+<h2>Line plot (cont.) <code>geom_line</code></h2>
+<p>Let’s generate a plot to compare all four stock market indices.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">ggplot</span>(stock_df_long,<span class="fu">aes</span>(<span class="at">x=</span>date,<span class="at">y=</span>close,<span class="at">color=</span>symbol)) <span class="sc">+</span> <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="line-plot-cont.-geom_line-1" class="slide level2">
+<h2>Line plot (cont.) <code>geom_line</code></h2>
+<p>Let’s theme it up a bit with the dark theme.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">ggplot</span>(stock_df_long,<span class="fu">aes</span>(<span class="at">x=</span>date,<span class="at">y=</span>close,<span class="at">color=</span>symbol)) <span class="sc">+</span> </span>
+<span id="cb11-2"><a href="#cb11-2"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span> </span>
+<span id="cb11-3"><a href="#cb11-3"></a>    <span class="fu">labs</span>(<span class="at">x=</span><span class="st">"Date"</span>,<span class="at">y=</span><span class="st">"Index Level at Close"</span>,</span>
+<span id="cb11-4"><a href="#cb11-4"></a>    <span class="at">title=</span><span class="st">"Comparison of Stock Market Indices"</span>,<span class="at">subtitle=</span><span class="st">"Period between 1991-1996"</span>,<span class="at">color=</span><span class="st">"Index"</span>) <span class="sc">+</span> </span>
+<span id="cb11-5"><a href="#cb11-5"></a>    <span class="fu">theme_dark</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="bar-plot-geom_bar" class="slide level2">
+<h2>Bar plot <code>geom_bar</code></h2>
+<p>Back to <code>starwars</code>. Let’s see the frequency of “eye color” of characters and draw a bar plot.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a>eye_color_df <span class="ot">&lt;-</span> starwars <span class="sc">%&gt;%</span> <span class="fu">count</span>(eye_color)</span>
+<span id="cb12-2"><a href="#cb12-2"></a>eye_color_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 15 × 2
+   eye_color         n
+   &lt;chr&gt;         &lt;int&gt;
+ 1 black            10
+ 2 blue             19
+ 3 blue-gray         1
+ 4 brown            21
+ 5 dark              1
+ 6 gold              1
+ 7 green, yellow     1
+ 8 hazel             3
+ 9 orange            8
+10 pink              1
+11 red               5
+12 red, blue         1
+13 unknown           3
+14 white             1
+15 yellow           11</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(eye_color_df,<span class="fu">aes</span>(<span class="at">x=</span>eye_color,<span class="at">y=</span>n)) <span class="sc">+</span> <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="bar-plot-cont.-geom_bar" class="slide level2">
+<h2>Bar plot (cont.) <code>geom_bar</code></h2>
+<p>Let’s make it more detailed with whether the eye color belongs to a human or not and sort by frequency. Notice how we</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a>eye_color_species_df <span class="ot">&lt;-</span> starwars <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">is_human=</span>(species <span class="sc">==</span> <span class="st">"Human"</span> <span class="sc">&amp;</span> <span class="sc">!</span><span class="fu">is.na</span>(species))) <span class="sc">%&gt;%</span> <span class="fu">group_by</span>(is_human) <span class="sc">%&gt;%</span> <span class="fu">count</span>(eye_color) <span class="sc">%&gt;%</span> <span class="fu">ungroup</span>()</span>
+<span id="cb15-2"><a href="#cb15-2"></a><span class="fu">ggplot</span>(eye_color_species_df,</span>
+<span id="cb15-3"><a href="#cb15-3"></a>    <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(eye_color,<span class="sc">-</span>n,<span class="cf">function</span>(x){<span class="fu">sum</span>(x)}),<span class="at">y=</span>n,<span class="at">fill=</span>is_human)) <span class="sc">+</span> </span>
+<span id="cb15-4"><a href="#cb15-4"></a>    <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>,<span class="at">position=</span><span class="st">"stack"</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Star Wars Characters by Eye Color"</span>,<span class="at">x=</span><span class="st">"Eye Color"</span>,<span class="at">y=</span><span class="st">"Number of Characters"</span>,<span class="at">fill=</span><span class="st">"is human?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="pie-chart-geom_bar-coord_polar" class="slide level2">
+<h2>Pie chart <code>geom_bar</code> + <code>coord_polar</code></h2>
+<p>Make some minor modifications (move x to fill) and add <code>coord_polar</code>; now you get a pie chart.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(eye_color_species_df,</span>
+<span id="cb16-2"><a href="#cb16-2"></a>    <span class="fu">aes</span>(<span class="at">x=</span><span class="st">""</span>,<span class="at">y=</span>n,<span class="at">fill=</span><span class="fu">reorder</span>(eye_color,n,<span class="cf">function</span>(x){<span class="fu">sum</span>(x)}))) <span class="sc">+</span> </span>
+<span id="cb16-3"><a href="#cb16-3"></a>    <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>,<span class="at">position=</span><span class="st">"stack"</span>) <span class="sc">+</span> </span>
+<span id="cb16-4"><a href="#cb16-4"></a>    <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Star Wars Characters by Eye Color"</span>,<span class="at">x=</span><span class="st">"Eye Color"</span>,<span class="at">y=</span><span class="st">"Number of Characters"</span>,<span class="at">fill=</span><span class="st">"is human?"</span>) <span class="sc">+</span> </span>
+<span id="cb16-5"><a href="#cb16-5"></a>    <span class="fu">coord_polar</span>(<span class="st">"y"</span>) <span class="sc">+</span> <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="ggplot2_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
 <section id="advanced-ggplot2" class="slide level2">
 <h2>Advanced <code>ggplot2</code></h2>
 <p>There is always more to learn. Here are some examples.</p>
 <ul>
+<li>There are much more plot types see the cheat sheet</li>
 <li><code>facet_grid</code> for multiple plots (<a href="https://ggplot2.tidyverse.org/reference/facet_grid.html">see</a>).</li>
 <li><code>scale_*</code> functions for fine tuning labels, axes etc.</li>
-<li>custom themes</li>
+<li>It is possible to add custom themes (see <code>ggthemes</code> library)</li>
 </ul>
 <p>See extra resources section on Book of EDA.</p>
 </section></section>

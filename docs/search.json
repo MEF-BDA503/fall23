@@ -256,7 +256,7 @@
     "href": "ggplot2.html#advanced-ggplot2",
     "title": "ggplot2",
     "section": "Advanced ggplot2",
-    "text": "Advanced ggplot2\nThere is always more to learn. Here are some examples.\n\nfacet_grid for multiple plots (see).\nscale_* functions for fine tuning labels, axes etc.\ncustom themes\n\nSee extra resources section on Book of EDA."
+    "text": "Advanced ggplot2\nThere is always more to learn. Here are some examples.\n\nThere are much more plot types see the cheat sheet\nfacet_grid for multiple plots (see).\nscale_* functions for fine tuning labels, axes etc.\nIt is possible to add custom themes (see ggthemes library)\n\nSee extra resources section on Book of EDA."
   },
   {
     "objectID": "projects.html",
@@ -299,5 +299,96 @@
     "title": "About BDA 503",
     "section": "",
     "text": "Course Name: Data Analytics Essentials\nCourse Code: BDA 503\nProgram: Big Data Analytics Grad Program\nUniversity: MEF University\nCourse Instructor of Fall 2023: Berk Orbay\nClick here for more information."
+  },
+  {
+    "objectID": "ggplot2.html#lineplot-cont.-geom_line",
+    "href": "ggplot2.html#lineplot-cont.-geom_line",
+    "title": "ggplot2",
+    "section": "Lineplot (cont.) geom_line",
+    "text": "Lineplot (cont.) geom_line\nLet’s generate a plot to compare all four stock market indices.\n\nggplot(stock_df_long,aes(x=date,y=close,color=symbol)) + geom_line()"
+  },
+  {
+    "objectID": "ggplot2.html#lineplot-cont.-geom_line-1",
+    "href": "ggplot2.html#lineplot-cont.-geom_line-1",
+    "title": "ggplot2",
+    "section": "Lineplot (cont.) geom_line",
+    "text": "Lineplot (cont.) geom_line\nLet’s theme it up a bit with the dark theme.\n\nggplot(stock_df_long,aes(x=date,y=close,color=symbol)) + \n    geom_line() + \n    labs(x=\"Date\",y=\"Index Level at Close\",\n    title=\"Comparison of Stock Market Indices\",subtitle=\"Period between 1991-1996\",color=\"Index\") + \n    theme_dark()"
+  },
+  {
+    "objectID": "ggplot2.html#lineplot-geom_line",
+    "href": "ggplot2.html#lineplot-geom_line",
+    "title": "ggplot2",
+    "section": "Lineplot geom_line",
+    "text": "Lineplot geom_line\nLet’s use another data for line plot, EUStockMarkets data from base R.\n\nstock_df &lt;- as_tibble(EuStockMarkets) %&gt;% mutate(date = lubridate::as_date(\"1991-01-01\") + 1:nrow(.), .before = everything())\nprint(stock_df)\n\n# A tibble: 1,860 × 5\n   date         DAX   SMI   CAC  FTSE\n   &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 1991-01-02 1629. 1678. 1773. 2444.\n 2 1991-01-03 1614. 1688. 1750. 2460.\n 3 1991-01-04 1607. 1679. 1718  2448.\n 4 1991-01-05 1621. 1684. 1708. 2470.\n 5 1991-01-06 1618. 1687. 1723. 2485.\n 6 1991-01-07 1611. 1672. 1714. 2467.\n 7 1991-01-08 1631. 1683. 1734. 2488.\n 8 1991-01-09 1640. 1704. 1757. 2508.\n 9 1991-01-10 1635. 1698. 1754  2510.\n10 1991-01-11 1646. 1716. 1754. 2497.\n# ℹ 1,850 more rows\n\n\nLet’s also make it more “plotable”.\n\nstock_df_long &lt;- stock_df %&gt;% pivot_longer(-date,names_to=\"symbol\",values_to=\"close\")\nprint(stock_df_long)\n\n# A tibble: 7,440 × 3\n   date       symbol close\n   &lt;date&gt;     &lt;chr&gt;  &lt;dbl&gt;\n 1 1991-01-02 DAX    1629.\n 2 1991-01-02 SMI    1678.\n 3 1991-01-02 CAC    1773.\n 4 1991-01-02 FTSE   2444.\n 5 1991-01-03 DAX    1614.\n 6 1991-01-03 SMI    1688.\n 7 1991-01-03 CAC    1750.\n 8 1991-01-03 FTSE   2460.\n 9 1991-01-04 DAX    1607.\n10 1991-01-04 SMI    1679.\n# ℹ 7,430 more rows"
+  },
+  {
+    "objectID": "ggplot2.html#barplot-geom_bar",
+    "href": "ggplot2.html#barplot-geom_bar",
+    "title": "ggplot2",
+    "section": "Barplot geom_bar",
+    "text": "Barplot geom_bar\nBack to starwars. Let’s see the frequency of “eye color” of characters.\n\neye_color_df &lt;- starwars %&gt;% count(eye_color)\neye_color_df\n\n# A tibble: 15 × 2\n   eye_color         n\n   &lt;chr&gt;         &lt;int&gt;\n 1 black            10\n 2 blue             19\n 3 blue-gray         1\n 4 brown            21\n 5 dark              1\n 6 gold              1\n 7 green, yellow     1\n 8 hazel             3\n 9 orange            8\n10 pink              1\n11 red               5\n12 red, blue         1\n13 unknown           3\n14 white             1\n15 yellow           11\n\nggplot(eye_color_df,aes(x=eye_color,y=n)) + geom_bar(stat=\"identity\")"
+  },
+  {
+    "objectID": "ggplot2.html#scatter-plot-geom_point",
+    "href": "ggplot2.html#scatter-plot-geom_point",
+    "title": "ggplot2",
+    "section": "Scatter plot geom_point",
+    "text": "Scatter plot geom_point\nselect simply displays columns\n\nggplot(starwars %&gt;% select(name, height, mass) %&gt;% filter(mass &lt; 1000) %&gt;% filter(complete.cases(.)), aes(x = height, y = mass)) +\n    geom_point()\n\n\nWe use + instead of the pipe operator (%&gt;%) to connect layers."
+  },
+  {
+    "objectID": "ggplot2.html#scatter-plot-cont.-geom_point",
+    "href": "ggplot2.html#scatter-plot-cont.-geom_point",
+    "title": "ggplot2",
+    "section": "Scatter plot (cont.) geom_point",
+    "text": "Scatter plot (cont.) geom_point\nLet’s add some categorization with color.\n\nggplot(starwars %&gt;% select(name, species, height, mass) %&gt;% filter(mass &lt; 1000) %&gt;% filter(complete.cases(.)), aes(x = height, y = mass)) +\n    geom_point(aes(color = species))"
+  },
+  {
+    "objectID": "ggplot2.html#scatter-plot-cont.-geom_point-1",
+    "href": "ggplot2.html#scatter-plot-cont.-geom_point-1",
+    "title": "ggplot2",
+    "section": "Scatter plot (cont.) geom_point",
+    "text": "Scatter plot (cont.) geom_point\nLet’s also add some labels and themes.\n\nggplot(starwars %&gt;% select(name, species, height, mass) %&gt;% filter(mass &lt; 1000) %&gt;% filter(complete.cases(.)), aes(x = height, y = mass)) +\n    geom_point(aes(color = species)) +\n    labs(title = \"Star Wars Characters by Height and Mass\", subtitle = \"Colors by species\", x = \"Height (in meters)\", y = \"Mass (in KG)\", color = \"Species\") +\n    theme_minimal() +\n    theme(legend.position = \"bottom\")"
+  },
+  {
+    "objectID": "ggplot2.html#line-plot-geom_line",
+    "href": "ggplot2.html#line-plot-geom_line",
+    "title": "ggplot2",
+    "section": "Line plot geom_line",
+    "text": "Line plot geom_line\nLet’s use another data for line plot, EUStockMarkets data from base R.\n\nstock_df &lt;- as_tibble(EuStockMarkets) %&gt;% mutate(date = lubridate::as_date(\"1991-01-01\") + 1:nrow(.), .before = everything())\nprint(stock_df)\n\n# A tibble: 1,860 × 5\n   date         DAX   SMI   CAC  FTSE\n   &lt;date&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 1991-01-02 1629. 1678. 1773. 2444.\n 2 1991-01-03 1614. 1688. 1750. 2460.\n 3 1991-01-04 1607. 1679. 1718  2448.\n 4 1991-01-05 1621. 1684. 1708. 2470.\n 5 1991-01-06 1618. 1687. 1723. 2485.\n 6 1991-01-07 1611. 1672. 1714. 2467.\n 7 1991-01-08 1631. 1683. 1734. 2488.\n 8 1991-01-09 1640. 1704. 1757. 2508.\n 9 1991-01-10 1635. 1698. 1754  2510.\n10 1991-01-11 1646. 1716. 1754. 2497.\n# ℹ 1,850 more rows\n\n\nLet’s also make it more “plotable”.\n\nstock_df_long &lt;- stock_df %&gt;% pivot_longer(-date,names_to=\"symbol\",values_to=\"close\")\nprint(stock_df_long)\n\n# A tibble: 7,440 × 3\n   date       symbol close\n   &lt;date&gt;     &lt;chr&gt;  &lt;dbl&gt;\n 1 1991-01-02 DAX    1629.\n 2 1991-01-02 SMI    1678.\n 3 1991-01-02 CAC    1773.\n 4 1991-01-02 FTSE   2444.\n 5 1991-01-03 DAX    1614.\n 6 1991-01-03 SMI    1688.\n 7 1991-01-03 CAC    1750.\n 8 1991-01-03 FTSE   2460.\n 9 1991-01-04 DAX    1607.\n10 1991-01-04 SMI    1679.\n# ℹ 7,430 more rows"
+  },
+  {
+    "objectID": "ggplot2.html#line-plot-cont.-geom_line",
+    "href": "ggplot2.html#line-plot-cont.-geom_line",
+    "title": "ggplot2",
+    "section": "Line plot (cont.) geom_line",
+    "text": "Line plot (cont.) geom_line\nLet’s generate a plot to compare all four stock market indices.\n\nggplot(stock_df_long,aes(x=date,y=close,color=symbol)) + geom_line()"
+  },
+  {
+    "objectID": "ggplot2.html#line-plot-cont.-geom_line-1",
+    "href": "ggplot2.html#line-plot-cont.-geom_line-1",
+    "title": "ggplot2",
+    "section": "Line plot (cont.) geom_line",
+    "text": "Line plot (cont.) geom_line\nLet’s theme it up a bit with the dark theme.\n\nggplot(stock_df_long,aes(x=date,y=close,color=symbol)) + \n    geom_line() + \n    labs(x=\"Date\",y=\"Index Level at Close\",\n    title=\"Comparison of Stock Market Indices\",subtitle=\"Period between 1991-1996\",color=\"Index\") + \n    theme_dark()"
+  },
+  {
+    "objectID": "ggplot2.html#bar-plot-geom_bar",
+    "href": "ggplot2.html#bar-plot-geom_bar",
+    "title": "ggplot2",
+    "section": "Bar plot geom_bar",
+    "text": "Bar plot geom_bar\nBack to starwars. Let’s see the frequency of “eye color” of characters and draw a bar plot.\n\neye_color_df &lt;- starwars %&gt;% count(eye_color)\neye_color_df\n\n# A tibble: 15 × 2\n   eye_color         n\n   &lt;chr&gt;         &lt;int&gt;\n 1 black            10\n 2 blue             19\n 3 blue-gray         1\n 4 brown            21\n 5 dark              1\n 6 gold              1\n 7 green, yellow     1\n 8 hazel             3\n 9 orange            8\n10 pink              1\n11 red               5\n12 red, blue         1\n13 unknown           3\n14 white             1\n15 yellow           11\n\nggplot(eye_color_df,aes(x=eye_color,y=n)) + geom_bar(stat=\"identity\")"
+  },
+  {
+    "objectID": "ggplot2.html#bar-plot-cont.-geom_bar",
+    "href": "ggplot2.html#bar-plot-cont.-geom_bar",
+    "title": "ggplot2",
+    "section": "Bar plot (cont.) geom_bar",
+    "text": "Bar plot (cont.) geom_bar\nLet’s make it more detailed with whether the eye color belongs to a human or not and sort by frequency. Notice how we\n\neye_color_species_df &lt;- starwars %&gt;% mutate(is_human=(species == \"Human\" & !is.na(species))) %&gt;% group_by(is_human) %&gt;% count(eye_color) %&gt;% ungroup()\nggplot(eye_color_species_df,\n    aes(x=reorder(eye_color,-n,function(x){sum(x)}),y=n,fill=is_human)) + \n    geom_bar(stat=\"identity\",position=\"stack\") + labs(title=\"Star Wars Characters by Eye Color\",x=\"Eye Color\",y=\"Number of Characters\",fill=\"is human?\")"
+  },
+  {
+    "objectID": "ggplot2.html#pie-chart-geom_bar-coord_polar",
+    "href": "ggplot2.html#pie-chart-geom_bar-coord_polar",
+    "title": "ggplot2",
+    "section": "Pie chart geom_bar + coord_polar",
+    "text": "Pie chart geom_bar + coord_polar\nMake some minor modifications (move x to fill) and add coord_polar; now you get a pie chart.\n\nggplot(eye_color_species_df,\n    aes(x=\"\",y=n,fill=reorder(eye_color,n,function(x){sum(x)}))) + \n    geom_bar(stat=\"identity\",position=\"stack\") + \n    labs(title=\"Star Wars Characters by Eye Color\",x=\"Eye Color\",y=\"Number of Characters\",fill=\"is human?\") + \n    coord_polar(\"y\") + theme_minimal()"
   }
 ]

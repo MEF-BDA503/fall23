@@ -54,7 +54,7 @@ starwars
 
 Let's recall `starwars` tibble from `dplyr`.
 
-## Scatterplot `geom_point`
+## Scatter plot `geom_point`
 
 `select` simply displays columns
 
@@ -68,7 +68,7 @@ ggplot(starwars %>% select(name, height, mass) %>% filter(mass < 1000) %>% filte
 
 We use `+` instead of the pipe operator (`%>%`) to connect layers.
 
-## Scatterplot (cont.) `geom_point`
+## Scatter plot (cont.) `geom_point`
 
 Let's add some categorization with `color`.
 
@@ -80,7 +80,7 @@ ggplot(starwars %>% select(name, species, height, mass) %>% filter(mass < 1000) 
     geom_point(aes(color = species))
 ```
 
-## Scatterplot (cont.) `geom_point`
+## Scatter plot (cont.) `geom_point`
 
 Let's also add some labels and themes.
 
@@ -95,14 +95,96 @@ ggplot(starwars %>% select(name, species, height, mass) %>% filter(mass < 1000) 
     theme(legend.position = "bottom")
 ```
 
+## Line plot `geom_line`
+
+Let's use another data for line plot, `EUStockMarkets` data from base R. 
+
+```{r}
+#| eval: true
+#| echo: true
+stock_df <- as_tibble(EuStockMarkets) %>% mutate(date = lubridate::as_date("1991-01-01") + 1:nrow(.), .before = everything())
+print(stock_df)
+```
+Let's also make it more "plotable".
+
+```{r}
+#| eval: true
+#| echo: true
+stock_df_long <- stock_df %>% pivot_longer(-date,names_to="symbol",values_to="close")
+print(stock_df_long)
+```
+
+## Line plot (cont.) `geom_line`
+
+Let's generate a plot to compare all four stock market indices.
+
+```{r}
+#| eval: true
+#| echo: true
+ggplot(stock_df_long,aes(x=date,y=close,color=symbol)) + geom_line()
+```
+
+## Line plot (cont.) `geom_line`
+
+Let's theme it up a bit with the dark theme.
+
+```{r}
+#| eval: true
+#| echo: true
+ggplot(stock_df_long,aes(x=date,y=close,color=symbol)) + 
+    geom_line() + 
+    labs(x="Date",y="Index Level at Close",
+    title="Comparison of Stock Market Indices",subtitle="Period between 1991-1996",color="Index") + 
+    theme_dark()
+```
+
+## Bar plot `geom_bar`
+
+Back to `starwars`. Let's see the frequency of "eye color" of characters and draw a bar plot.
+
+```{r}
+#| eval: true
+#| echo: true
+eye_color_df <- starwars %>% count(eye_color)
+eye_color_df
+ggplot(eye_color_df,aes(x=eye_color,y=n)) + geom_bar(stat="identity")
+```
+
+## Bar plot (cont.) `geom_bar`
+
+Let's make it more detailed with whether the eye color belongs to a human or not and sort by frequency. Notice how we 
+
+```{r}
+#| eval: true
+#| echo: true
+eye_color_species_df <- starwars %>% mutate(is_human=(species == "Human" & !is.na(species))) %>% group_by(is_human) %>% count(eye_color) %>% ungroup()
+ggplot(eye_color_species_df,
+    aes(x=reorder(eye_color,-n,function(x){sum(x)}),y=n,fill=is_human)) + 
+    geom_bar(stat="identity",position="stack") + labs(title="Star Wars Characters by Eye Color",x="Eye Color",y="Number of Characters",fill="is human?")
+```
+
+## Pie chart `geom_bar` + `coord_polar`
+
+Make some minor modifications (move x to fill) and add `coord_polar`; now you get a pie chart.
+
+```{r}
+#| eval: true
+#| echo: true
+ggplot(eye_color_species_df,
+    aes(x="",y=n,fill=reorder(eye_color,n,function(x){sum(x)}))) + 
+    geom_bar(stat="identity",position="stack") + 
+    labs(title="Star Wars Characters by Eye Color",x="Eye Color",y="Number of Characters",fill="is human?") + 
+    coord_polar("y") + theme_minimal()
+```
 
 ## Advanced `ggplot2`
 
 There is always more to learn. Here are some examples.
 
++ There are much more plot types see the cheat sheet
 + `facet_grid` for multiple plots ([see](https://ggplot2.tidyverse.org/reference/facet_grid.html)).
 + `scale_*` functions for fine tuning labels, axes etc.
-+ custom themes
++ It is possible to add custom themes (see `ggthemes` library)
 
 See extra resources section on Book of EDA.
 
