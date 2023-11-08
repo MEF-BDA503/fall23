@@ -5,6 +5,8 @@ toc: false
 
 # Week 3
 
+Guest Lecture: [Ahmet Tunçel](https://www.linkedin.com/in/ahmettuncel/) - Senior Data Architect Manager at Sky Deutschland GmbH
+
 - [Introduction to ggplot2](./ggplot2.html)
 - [ggplot2 Lecture Notes](https://berkorbay.github.io/book-of-eda/ggplot2.html)
 - [ggplot2 official page and cheat sheet](https://ggplot2.tidyverse.org/)
