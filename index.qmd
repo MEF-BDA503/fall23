@@ -11,19 +11,6 @@ Guest Lecture: [Ahmet Tunçel](https://www.linkedin.com/in/ahmettuncel/) - Senio
 - [ggplot2 Lecture Notes](https://berkorbay.github.io/book-of-eda/ggplot2.html)
 - [ggplot2 official page and cheat sheet](https://ggplot2.tidyverse.org/)
 
-::: {.callout-caution title="In-Class Exercise (Individual)" collapse="false"}
-Update your analysis using both `dplyr` and `ggplot2` on your proposed data sets in Assignment 1. Open a new \.qmd document named `inclass2.qmd` and make it visible on your PJ (update `_quarto.yml` file). (DO NOT TOUCH `inclass1.qmd`)
-:::
-
-::: {.callout-caution title="Group Assignment (Tentative)" collapse="false"}
-Deadline (TBA)
-Use Global Dietary Database and prepare a brief exploratory data analysis using `dplyr` and `ggplot2`.
-
-+ [Global Dietary Database (Nutrition)](https://www.globaldietarydatabase.org/)
-    + [Data](https://www.globaldietarydatabase.org/data-download)
-:::
-
-
 ::: {.callout-tip title="Bonus Material" collapse="true"}
 - *Supplementary resources*
     - [ggplot2 Cheat Sheet](https://www.maths.usyd.edu.au/u/UG/SM/STAT3022/r/current/Misc/data-visualization-2.1.pdf)
@@ -35,6 +22,18 @@ Use Global Dietary Database and prepare a brief exploratory data analysis using 
     - Download Data ([xlsx](https://github.com/berkorbay/datasets/raw/master/foreign_students/foreign_students_by_nationality_2021_2022.xlsx))
     - Starter Code ([gist](https://gist.github.com/berkorbay/f394bf2ea8775cf7b5316aeafd27c482#file-foreign_students_report_starter_code-qmd))
 :::
+
+::: {.callout-caution title="In-Class Exercise (Individual)" collapse="false"}
+Update your analysis using both `dplyr` and `ggplot2` on your proposed data sets in Assignment 1. Open a new \.qmd document named `inclass2.qmd` and make it visible on your PJ (update `_quarto.yml` file). (DO NOT TOUCH `inclass1.qmd`)
+:::
+
+::: {.callout-caution title="Group Assignment (Tentative) Deadline: Nov 23, 18:30" collapse="false"}
+[Global Dietary Database](https://globaldietarydatabase.org) provides a wealth of data regarding nutrition intake of a large number of countries. Your assignment is to prepare a brief exploratory data analysis on **Vitamin B12 intake of Former Soviet Union countries** using `dplyr` and `ggplot2`. Relevant subset and explanations are given in the below links.
+
++ [Data set](https://raw.githubusercontent.com/berkorbay/datasets/master/gdd/gdd_b12_levels.csv)
++ [Codebook (Explanations)](https://github.com/berkorbay/datasets/raw/master/gdd/GDD%202018%20Codebook_Jan%2010%202022.xlsx)
+:::
+
 
 # Week 2
 
