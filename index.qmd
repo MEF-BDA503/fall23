@@ -3,6 +3,39 @@ title: "BDA 503 Fall 2023"
 toc: false
 ---
 
+# Week 5
+
+_advanced dplyr_
+
+# Week 4
+
+Guest Lecture: [Burak Yitgin](https://www.linkedin.com/in/burakyitgin/) - Business Development Manager and Senior Consultant at APLUS Enerji
+
+This week's lecture is focused on **Shiny**, an R package to develop interactive dashboards and web pages. Shiny is also available for [Python](https://shiny.rstudio.com/py/), so what you learn here is transferrable to Python.
+
+- [Introduction to Shiny (official tutorial)](https://shiny.rstudio.com/tutorial/)
+    - [Showcase Gallery](https://shiny.rstudio.com/gallery/)
+    - [Cheat Sheet](https://shiny.rstudio.com/articles/cheatsheet.html)
+    - [shinyapps.io](https://shinyapps.io)
+- [Example app (Movies)](https://gist.github.com/berkorbay/5793188b7ebfe013ce64703179f9aa01).
+
+:::{.callout-tip title="Bonus Material" collapse="true"}
+**Additional resources**
+
++ [shinylive](https://shiny.posit.co/py/docs/shinylive.html)
++ [shinylive R Package](https://posit-dev.github.io/r-shinylive/)
++ [Mastering Shiny](https://mastering-shiny.org/)  
++ [`golem` R package](https://thinkr-open.github.io/golem/)
++ [Engineering Shiny (advanced)](https://engineering-shiny.org/)
++ [`shinydashboard` R package](https://rstudio.github.io/shinydashboard/) for additional dashboard capabilities.
++ [`shinyMobile` R package](https://rinterface.github.io/shinyMobile/) for mobile app-like capabilities.
+:::
+
+::: {.callout-caution title="In-Class Exercise (Individual)" collapse="false"}
+Build a `shiny` app using your proposed data sets in Assignment 1 and deploy it to [shinyapps.io](https://shinyapps.io). Add a link to your Shiny app in your Progress Journal as In-class assignment 3. 
+:::
+
+
 # Week 3
 
 Guest Lecture: [Ahmet Tunçel](https://www.linkedin.com/in/ahmettuncel/) - Senior Data Architect Manager at Sky Deutschland GmbH
