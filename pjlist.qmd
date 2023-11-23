@@ -6,6 +6,10 @@ title: "Progress Journals"
 
 See [here](./projects) for group project details.
 
+- [Astral Projection](https://pjournal.github.io/mef07g-astralprojection/)
+- [Yellow Submarine](https://pjournal.github.io/mef07g-yellowsubmarine/)
+- [Sun Forest](https://pjournal.github.io/mef07g-sunforest/)
+
 ### Student Progress Journals
 
 *Ordered by first name*
