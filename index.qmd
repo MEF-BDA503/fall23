@@ -5,7 +5,12 @@ toc: false
 
 # Week 5
 
-_advanced dplyr_
+This week's lecture is more about some intermediate topics about data processing/manipulation. We will mainly learn about joins, long/wide tables. In addition, if time permits, some data parsing from web site sources.
+
+- [dplyr joins](https://stat545.com/join-cheatsheet.html)
+    - [Mini live lecture](https://berkorbay.github.io/book-of-eda/dplyr-joins.html)
+- [Brief tutorial on pivot_longer/pivot_wider](https://pjournal.github.io/boun-ie48a/files/short_tutorial_on_pivot_wider_longer.html)  
+- (if time permits) [rvest](https://berkorbay.github.io/book-of-eda/rvest.html) 
 
 # Week 4
 
