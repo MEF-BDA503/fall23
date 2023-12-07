@@ -5,6 +5,8 @@ toc: false
 
 # Week 5
 
+Guest Lecture: [Barbaros Yet](https://www.linkedin.com/in/barbaros-yet-1a5b4a17/) - Associate Professor at Middle East Technical University, Graduate School of Informatics
+
 This week's lecture is more about some intermediate topics about data processing/manipulation. We will mainly learn about joins, long/wide tables. In addition, if time permits, some data parsing from web site sources.
 
 - [dplyr joins](https://stat545.com/join-cheatsheet.html)
