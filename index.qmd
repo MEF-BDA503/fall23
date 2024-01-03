@@ -3,6 +3,16 @@ title: "BDA 503 Fall 2023"
 toc: false
 ---
 
+# Week 7
+
+Guest Lecture: [Onur Karadeli](https://www.linkedin.com/in/onur-karadeli-phd-c-a46a59112/) - Director of Digital Transformation and Data Analytics at OYAK Indisol
+
+Project presentations!
+
+- [Astral Projection](https://pjournal.github.io/mef07g-astralprojection/report.html)
+- [Yellow Submarine](https://pjournal.github.io/mef07g-yellowsubmarine/finalreport.html)
+- [Sun Forest](https://pjournal.github.io/mef07g-sunforest/finalreport.html)
+
 # Week 6
 
 Guest Lecture: [Eda Ocak](https://www.linkedin.com/in/eda-ocak/) - Partner at ThinkNeuro
