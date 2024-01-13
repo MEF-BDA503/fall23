@@ -16,6 +16,7 @@ See [here](./projects) for group project details.
 
 - [Bengü Üzmez](https://pjournal.github.io/mef07-uzmezb/)
 - [Burcu Altiparmak Işıklı](https://pjournal.github.io/mef07-BurcuAltiparmak/)
+- [Cem Deniz Sayıner](https://pjournal.github.io/mef07-cmdnz/)
 - [Derya Şaşmaz](https://pjournal.github.io/mef07-sasmazd/)
 - [Gözde Uğur Kayar](https://pjournal.github.io/mef07-GozdeUgurK/)
 - [Melih Can Akgül](https://pjournal.github.io/mef07-meakgul)
